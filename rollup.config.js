@@ -10,9 +10,9 @@ import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 
 export default {
-  input: 'my-element.js',
+  input: 'my-koro-beef-game-picker.js',
   output: {
-    file: 'my-element.bundled.js',
+    file: 'koro-beef-game-picker.bundled.js',
     format: 'esm',
   },
   onwarn(warning) {
