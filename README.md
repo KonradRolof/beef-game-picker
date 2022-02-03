@@ -1,6 +1,6 @@
 # LitElement TypeScript starter
 
-This project includes a sample component using LitElement with TypeScript.
+This project was made with the [LitElement TypeScript starter](https://github.com/lit/lit-element-starter-ts) project.
 
 ## Setup
 
