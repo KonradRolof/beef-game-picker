@@ -1,20 +1,19 @@
 {
-  "eslintConfig": {
-    "extends": ["react-app", "react-app/jest", "shared-config"],
-    "rules": {
-      "additional-rule": "warn",
-      "comma-dangle": ["error", "always-multiline"],
-      "eol-last": ["error", "always"],
-      "semi": ["error", "always",  { "omitLastInOneLineBlock": true }],
-      "semi-style": ["error", "last"]
-    },
-    "overrides": [
-      {
-        "files": ["**/*.ts?(x)"],
-        "rules": {
-          "additional-typescript-only-rule": "warn"
-        }
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": ["error", "always"],
+    "semi": ["error", "always",  { "omitLastInOneLineBlock": true }],
+    "semi-style": ["error", "last"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
       }
-    ]
-  }
+    }
+  ]
 }
