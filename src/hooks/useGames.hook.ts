@@ -8,7 +8,12 @@ export default function useGames(url: string): Game[] {
   useEffect(() => {
       axios.get(url)
         .then((response) => {
-          setGames(response.data as Game[]);
+          const data = response.data;
+          const gameData = data.map((item: any) => {
+            item.isActive = true;
+            return item as Game;
+          });
+          setGames(gameData);
         })
         .catch((error) => console.error(error));
   }, [url]);
