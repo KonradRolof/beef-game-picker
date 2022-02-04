@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import useGames from './hooks/useGames.hook';
-import slugify from 'slugify';
 import Game from './interfaces/Game.interface';
 
 function sortGames(games: Game[]): Game[] {
@@ -10,9 +9,10 @@ function sortGames(games: Game[]): Game[] {
 
 function App() {
   const games = useGames('./data/games.json');
-  const [gamesPool, setGamesPool] = useState(games);
+  const [gamesPool, setGamesPool] = useState<Game[]>([]);
 
   const handleGameClick = (game: Game) => {
+    console.log(game);
     setGamesPool((state) => {
       const item = state.find((item) => item.name === game.name);
       if (!item) return state;
@@ -38,7 +38,7 @@ function App() {
         ) : (
           <ul>
             {gamesPool.map((game) => (
-            <li key={slugify(game.name)}>
+            <li key={game.slug}>
               <label>
                 {game.name}
                 <input type="checkbox" defaultChecked={game.isActive} onChange={() => handleGameClick(game)}/>
