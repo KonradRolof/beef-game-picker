@@ -1,6 +1,0 @@
-[*]
-indent_style = space
-
-[*.{ts,json}]
-end_of_line = lf
-indent_size = 2
