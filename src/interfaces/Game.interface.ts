@@ -4,4 +4,4 @@ export default interface Game {
   genre: string;
   players: number;
   multiDeviceNeeded: boolean;
-}
+} // eslint-disable-line
