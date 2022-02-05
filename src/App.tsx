@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from 'react';
-import './App.css';
+import './scss/App.scss';
 import Picker from './components/Picker';
 import useGames from './hooks/useGames.hook';
 import ActionInterface from './interfaces/Action.interface';
@@ -31,44 +31,54 @@ function App() {
   } as ActionInterface), [games]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Royal Beef:
-          <span>Pick the Games</span>
-        </h1>
-      </header>
-      <div>
-        { 0 === gamesPool.length ? (
-          <p>Loading</p>
-        ) : (
-          <>
-            <Picker games={gamesPool} />
-            <section className="games-pool">
-              <header className="games-pool__header">
-                <button onClick={() => setShowPool((state) => !state)}>
-                  { showPool ? 'Hide games pool' : 'Show games pool' }
-                </button>
-              </header>
-              { showPool && (
-                <>
-                  <div>
-                    <button onClick={() => handleUnselectAll()}>Unselect all games</button>
-                  </div>
-                  <ul>
-                    {gamesPool.map((game) => (
-                    <li key={game.slug}>
-                      <label>
-                        {game.title}
-                        <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
-                      </label>
-                    </li>
-                    ))}
-                  </ul>
-                </>
-              ) }
-            </section>
-          </>
-        )}
+    <div className="BeefGamePicker">
+      <div className="BeefGamePicker__container">
+        <header className="BeefGamePicker__header">
+          <h1>Royal Beef:
+            <span>Pick the Games</span>
+          </h1>
+        </header>
+        <div>
+          { 0 === gamesPool.length ? (
+            <p>Loading ...</p>
+          ) : (
+            <>
+              <Picker games={gamesPool} />
+              <section className="games-pool">
+                <header className="games-pool__header">
+                  <button
+                    className="btn"
+                    onClick={() => setShowPool((state) => !state)}
+                  >
+                    { showPool ? 'Hide games pool' : 'Show games pool' }
+                  </button>
+                </header>
+                { showPool && (
+                  <>
+                    <div className="games-pool__control">
+                      <button
+                        className="btn"
+                        onClick={() => handleUnselectAll()}
+                      >Unselect all games</button>
+                    </div>
+                    <div className="games-pool__body">
+                      <ul>
+                        {gamesPool.map((game) => (
+                        <li key={game.slug}>
+                          <label>
+                            {game.title}
+                            <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
+                          </label>
+                        </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                ) }
+              </section>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

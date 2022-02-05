@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Game from "../interfaces/Game.interface";
 import Counter from "./Counter";
 import PickItem from "./PickItem";
+import '../scss/Picker.scss';
 
 const DEFAULT_GAME_COUNT = 12;
 const DEFAULT_PICK_DELAY = 5;
@@ -81,11 +82,13 @@ function Picker(props: PickerProps) {
           />
         </div>
       </div>
-      <button
-        className="btn"
-        onClick={() => pickGame()}
-        { ...buttonOptions }
-      >Select game</button>
+      <div className="Picker__cta">
+        <button
+          className="btn"
+          onClick={() => pickGame()}
+          { ...buttonOptions }
+        >Select game</button>
+      </div>
       { null !== newPick && (
         <Counter
           game={ newPick }
@@ -93,7 +96,7 @@ function Picker(props: PickerProps) {
           onCountdownEnd={onCountdownEnd}
         />
       ) }
-      { 0 < picks.length && (
+      { 0 < picks.length ? (
         <>
           <h2>The games you play:</h2>
           <ul>
@@ -104,6 +107,11 @@ function Picker(props: PickerProps) {
             )) }
           </ul>
         </>
+      ) : (
+        <div className="Picker__warning">
+          <p>No games selected yet.</p>
+          <p>This is your last chance to quit.</p>
+        </div>
       ) }
     </section>
   );
