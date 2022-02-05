@@ -58,7 +58,7 @@ function App() {
                     {gamesPool.map((game) => (
                     <li key={game.slug}>
                       <label>
-                        {game.name}
+                        {game.title}
                         <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
                       </label>
                     </li>

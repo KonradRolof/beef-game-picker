@@ -3,21 +3,35 @@ import { useEffect, useState } from 'react';
 import slugify from 'slugify';
 import Game from '../interfaces/Game.interface';
 
+type CsvData = {
+  title: string;
+  genre: string;
+  platform: string;
+  players: number;
+  multiDeviceNeeded: string;
+}
+
 export default function useGames(url: string): Game[] {
   const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
       axios.get(url)
         .then((response) => {
-          const data = response.data;
-          const gameData = data.map((item: any, index: number) => {
-            item.isActive = true;
-            item.id = index;
-            item.slug = slugify(item.name, {
-              lower: true,
-              strict: true,
-            });
-            return item as Game;
+          const data = response.data as CsvData[];
+          const gameData = data.map((item, index: number) => {
+            return {
+              title: item.title,
+              genre: item.genre,
+              platform: item.platform.split(',').map((entry) => entry.trim()),
+              players: item.players,
+              multiDeviceNeeded: item.multiDeviceNeeded === "TRUE",
+              isActive: true,
+              id: index,
+              slug: slugify(item.title, {
+                lower: true,
+                strict: true,
+              }),
+            } as Game;
           });
           setGames(gameData);
         })

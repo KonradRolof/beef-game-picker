@@ -14,7 +14,7 @@ function Picker(props: PickerProps) {
 
   const getRandomGame = (): Game|null => {
     const { games } = props;
-    const randomIndex = Math.floor((Math.random() * games.length));
+    const randomIndex = Math.floor((Math.random() * (games.length - 1)));
     const game = games[randomIndex];
     if (!game.isActive) return null;
     if (!picks.find((item) => item.slug === game.slug)) return game;

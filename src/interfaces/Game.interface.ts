@@ -1,10 +1,10 @@
 export default interface Game {
   id: number;
-  name: string;
+  title: string;
   genre: string;
   isActive: boolean;
   multiDeviceNeeded: boolean;
-  platform: string;
+  platform: string[];
   players: number;
   slug: string;
 } // eslint-disable-line

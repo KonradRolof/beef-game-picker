@@ -10,22 +10,29 @@ type PickItemProps = {
 
 function PickItem(props: PickItemProps) {
   const { game, onVeto } = props;
-  const platformSlug = slugify(game.platform, {
+  const platformSlugs: string[] = game.platform.map((platform) => slugify(platform, {
     lower: true,
     strict: true,
-  }) || "no-platform-defined";
+  }));
+  if (0 === platformSlugs.length) platformSlugs.push("undefined platform");
 
   return (
-    <article className={clsx("PickItem", platformSlug )}>
-      <div className="PickItem__title">{ game.name }</div>
+    <article className={clsx("PickItem", platformSlugs )}>
+      <div className="PickItem__title">{ game.title }</div>
       <div className="PickItem__info">
         <span>{ game.genre }</span>{ ', ' }
         <span>{ game.players } {1 < game.players ? 'Players' : 'Player'}</span>
       </div>
       <div className="PickItem__labels">
-        <span className="PickItem__label PickItem__label--platform">
-          { game.platform }
-          </span>
+        { game.platform.map((platform) => (
+            <span className={clsx("PickItem__label PickItem__label--platform", slugify(platform, {
+              lower: true,
+              strict: true,
+            }))} key={platform}>
+              { platform }
+            </span>
+          ))
+        }
         { game.multiDeviceNeeded && (
           <span className="PickItem__label PickItem__label--multi">
             Needs multiple devices

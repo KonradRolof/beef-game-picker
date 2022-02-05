@@ -17,11 +17,11 @@ export default function gamePoolReducer(state: Game[], action: ActionInterface):
 
     case ACTIONS.FILTER:
       const { game } = action.payload;
-      const item = state.find((item) => item.name === game.name);
+      const item = state.find((item) => item.slug === game.slug);
       if (!item) return state;
       const gameItem = {...item};
       gameItem.isActive = !game.isActive;
-      newState = state.filter((item) => item.name !== game.name);
+      newState = state.filter((item) => item.slug !== game.slug);
       return sortGames([...newState, gameItem]);
   
     case ACTIONS.DISABLE_ALL:

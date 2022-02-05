@@ -1,415 +1,415 @@
 [
-    {
-      "name": "DoA",
-      "platform": "",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Worms",
-      "platform": "Xbox",
-      "genre": "Undefined Indi Action",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Halo",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Forza Mortorsport 7",
-      "platform": "Xbox",
-      "genre": "Racing Sim",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Mortal Kombat",
-      "platform": "Xbox",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Brawlhalla",
-      "platform": "Xbox",
-      "genre": "Brawler",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Mario Kart",
-      "platform": "Switch",
-      "genre": "Racing Arcade",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Mario Golf Rush",
-      "platform": "Switch",
-      "genre": "Sport Arcade",
-      "players": 4,
-      "multiDeviceNeeded": true
-    },
-    {
-      "name": "FIFA",
-      "platform": "Xbox",
-      "genre": "Sport Sim",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "GT Sport",
-      "platform": "Play Station 4",
-      "genre": "Racing Sim",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Nidhogg",
-      "platform": "",
-      "genre": "Undefined Indi Action",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Tekken 7",
-      "platform": "Xbox",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Dragon Ball Fighter Z",
-      "platform": "Xbox, Switch",
-      "genre": "Beat 'em up 2D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Wipeout",
-      "platform": "Play Station 4",
-      "genre": "Racing Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Bomberman",
-      "platform": "",
-      "genre": "Undefined Indi Action",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Super Street Fighter",
-      "platform": "",
-      "genre": "Beat 'em up 2D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "NBA 2k Playgrounds",
-      "platform": "Xbox",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Lance A Lot",
-      "platform": "PC Steam",
-      "genre": "Undefined Indi Action",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Dirt 5",
-      "platform": "Xbox",
-      "genre": "Racing Sim",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Dodgeball Academia",
-      "platform": "Xbox",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Dunk Lords",
-      "platform": "Xbox",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "PGA Tour",
-      "platform": "Xbox",
-      "genre": "Sport Sim",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Gang Beasts",
-      "platform": "Xbox, Steam",
-      "genre": "Brawler",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Tetris Effects Connected",
-      "platform": "Xbox",
-      "genre": "Puzzle",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Overcooked! 2",
-      "platform": "Switch",
-      "genre": "Undefined Indi Action",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Soul Calibour",
-      "platform": "Xbox, Play Station 4",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Tony Hawks Pro Skater",
-      "platform": "Xbox",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Trials",
-      "platform": "Xbox",
-      "genre": "Racing Arcade",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "WWE 2K",
-      "platform": "Xbox",
-      "genre": "Beat 'em up 3D",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Super Smash Bros",
-      "platform": "Switch",
-      "genre": "Brawler",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Rayman Legends Kung Foot",
-      "platform": "Xbox",
-      "genre": "Undefined Indi Action",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Injustice",
-      "platform": "Xbox",
-      "genre": "Beat 'em up 2D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Super Mario Maker 2",
-      "platform": "Switch",
-      "genre": "Jump 'n' Run",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Castle Crashers",
-      "platform": "",
-      "genre": "Brawler",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Mario Tennis Aces",
-      "platform": "Switch",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Puyo Puyo Tetris",
-      "platform": "Switch",
-      "genre": "Puzzle",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Pokkén Tournament DX",
-      "platform": "Switch",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Mario & Sonic bei den Olympischen Spielen",
-      "platform": "Switch",
-      "genre": "Sport Arcade",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Plants vs. Zombies: Garden Warefare 2",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Disc Jam",
-      "platform": "Play Station 4",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Hellish Quart",
-      "platform": "PC Steam",
-      "genre": "Beat 'em up 3D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Laser League",
-      "platform": "Xbox",
-      "genre": "Sport Arcade",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Arms",
-      "platform": "Switch",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Starwhal",
-      "platform": "Xbox",
-      "genre": "Undefined Indi Action",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Tekken 3 Volleyball",
-      "platform": "Play Station",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Blobby Volley",
-      "platform": "http://blobbyvolley.de/data/bv2browser/",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Red Faction",
-      "platform": "",
-      "genre": "Undefined Indi Action",
-      "players": 1,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Speedrunners",
-      "platform": "PC",
-      "genre": "Jump 'n' Run",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Rocket League",
-      "platform": "",
-      "genre": "Sport Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Towerfall",
-      "platform": "",
-      "genre": "Undefined Indi Action",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Geometry Wars 3 Dimensions Envolved",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Crash Team Racing Nitro-Fueled",
-      "platform": "Xbox",
-      "genre": "Racing Arcade",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Starcraft 2",
-      "platform": "PC Battlenet",
-      "genre": "Strategy",
-      "players": 4,
-      "multiDeviceNeeded": true
-    },
-    {
-      "name": "Gears of War Ultimate",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "players": 4,
-      "multiDeviceNeeded": true
-    },
-    {
-      "name": "Doom",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "players": 4,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Marvel vs. Capcom",
-      "platform": "Xbox",
-      "genre": "Beat 'em up 2D",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Clumsy Rush",
-      "platform": "Xbox",
-      "genre": "Undefined Indi Action",
-      "players": "",
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Hot Wheels Unleashed",
-      "platform": "Xbox",
-      "genre": "Racing Arcade",
-      "players": 2,
-      "multiDeviceNeeded": false
-    },
-    {
-      "name": "Age of Empires IV",
-      "platform": "PC MS STore",
-      "genre": "Strategy",
-      "players": 4,
-      "multiDeviceNeeded": true
-    }
-  ]
+  {
+    "title": "DoA",
+    "platform": "Xbox, Play Station 4",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Worms",
+    "platform": "Xbox",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Halo",
+    "platform": "Xbox",
+    "genre": "Shooter",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Forza Mortorsport 7",
+    "platform": "Xbox",
+    "genre": "Sim Racing",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Mortal Kombat",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Brawlhalla",
+    "platform": "Xbox",
+    "genre": "Brawler",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Mario Kart",
+    "platform": "Switch",
+    "genre": "Arcade Racing",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Mario Golf Rush",
+    "platform": "Switch",
+    "genre": "Arcade Sport",
+    "players": 4,
+    "multiDeviceNeeded": "TRUE"
+  },
+  {
+    "title": "FIFA",
+    "platform": "Xbox",
+    "genre": "Sport Sim",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "GT Sport",
+    "platform": "Play Station 4",
+    "genre": "Sim Racing",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Nidhogg",
+    "platform": "PC Steam",
+    "genre": "Indi Action",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Tekken 7",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Dragon Ball Fighter Z",
+    "platform": "Xbox, Switch",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Wipeout",
+    "platform": "Play Station 4",
+    "genre": "Arcade Racing",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Bomberman",
+    "platform": "",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Super Street Fighter",
+    "platform": "SNES",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "NBA 2k Playgrounds",
+    "platform": "Xbox",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Lance A Lot",
+    "platform": "PC Steam",
+    "genre": "Indi Action",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Dirt 5",
+    "platform": "Xbox",
+    "genre": "Sim Racing",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Dodgeball Academia",
+    "platform": "Xbox",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Dunk Lords",
+    "platform": "Xbox",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "PGA Tour",
+    "platform": "Xbox",
+    "genre": "Sport Sim",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Gang Beasts",
+    "platform": "Xbox, PC Steam",
+    "genre": "Brawler",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Tetris Effects Connected",
+    "platform": "Xbox",
+    "genre": "Puzzle",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Overcooked! 2",
+    "platform": "Switch",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Soul Calibour",
+    "platform": "Xbox, Play Station 4",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Tony Hawks Pro Skater",
+    "platform": "Xbox",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Trials",
+    "platform": "Xbox",
+    "genre": "Arcade Racing",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "WWE 2K",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 3D",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Super Smash Bros",
+    "platform": "Switch",
+    "genre": "Brawler",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Rayman Legends Kung Foot",
+    "platform": "Xbox",
+    "genre": "Indi Action",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Injustice",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Super Mario Maker 2",
+    "platform": "Switch",
+    "genre": "Jump 'n' Run",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Castle Crashers",
+    "platform": "",
+    "genre": "Brawler",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Mario Tennis Aces",
+    "platform": "Switch",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Puyo Puyo Tetris",
+    "platform": "Switch",
+    "genre": "Puzzle",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Pokkén Tournament DX",
+    "platform": "Switch",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Mario & Sonic bei den Olympischen Spielen",
+    "platform": "Switch",
+    "genre": "Arcade Sport",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Plants vs. Zombies: Garden Warefare 2",
+    "platform": "Xbox",
+    "genre": "Shooter",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Disc Jam",
+    "platform": "Play Station 4",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Hellish Quart",
+    "platform": "PC Steam",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Laser League",
+    "platform": "Xbox",
+    "genre": "Arcade Sport",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Arms",
+    "platform": "Switch",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Starwhal",
+    "platform": "Xbox",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Tekken 3 Volleyball",
+    "platform": "Play Station 1",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Blobby Volley",
+    "platform": "Web",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Red Faction",
+    "platform": "",
+    "genre": "Indi Action",
+    "players": 1,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Speedrunners",
+    "platform": "PC",
+    "genre": "Jump 'n' Run",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Rocket League",
+    "platform": "",
+    "genre": "Arcade Sport",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Towerfall",
+    "platform": "",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Geometry Wars 3 Dimensions Envolved",
+    "platform": "Xbox",
+    "genre": "Shooter",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Crash Team Racing Nitro-Fueled",
+    "platform": "Xbox",
+    "genre": "Arcade Racing",
+    "players": 4,
+    "multiDeviceNeeded": "TRUE"
+  },
+  {
+    "title": "Starcraft 2",
+    "platform": "PC Battlenet",
+    "genre": "Strategy",
+    "players": 4,
+    "multiDeviceNeeded": "TRUE"
+  },
+  {
+    "title": "Gears of War Ultimate",
+    "platform": "Xbox",
+    "genre": "Shooter",
+    "players": 4,
+    "multiDeviceNeeded": "TRUE"
+  },
+  {
+    "title": "Doom",
+    "platform": "Xbox",
+    "genre": "Shooter",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Marvel vs. Capcom",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Clumsy Rush",
+    "platform": "Xbox",
+    "genre": "Indi Action",
+    "players": "",
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Hot Wheels Unleashed",
+    "platform": "Xbox",
+    "genre": "Arcade Racing",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Age of Empires IV",
+    "platform": "PC Gamepass",
+    "genre": "Strategy",
+    "players": 4,
+    "multiDeviceNeeded": "TRUE"
+  }
+]
