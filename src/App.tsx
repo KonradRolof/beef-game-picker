@@ -1,30 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import './App.css';
 import Picker from './components/Picker';
 import useGames from './hooks/useGames.hook';
+import ActionInterface from './interfaces/Action.interface';
 import Game from './interfaces/Game.interface';
-
-function sortGames(games: Game[]): Game[] {
-  return games.sort((a, b) => a.name.localeCompare(b.name));
-}
+import gamePoolReducer, { ACTIONS } from './reducer/gamesPool.reducer';
 
 function App() {
   const games = useGames('./data/games.json');
-  const [gamesPool, setGamesPool] = useState<Game[]>([]);
+  const [gamesPool, dispatch] = useReducer(gamePoolReducer, []);
 
   const handleGameClick = (game: Game) => {
-    console.log(game);
-    setGamesPool((state) => {
-      const item = state.find((item) => item.name === game.name);
-      if (!item) return state;
-      const gameItem = {...item};
-      gameItem.isActive = !game.isActive;
-      const newState = state.filter((item) => item.name !== game.name);
-      return sortGames([...newState, gameItem]);
-    });
+    dispatch({
+      type:ACTIONS.FILTER,
+      payload: { game },
+    } as ActionInterface);
   };
 
-  useEffect(() => setGamesPool(sortGames(games)), [games]);
+  const handleUnselectAll = () => {
+    dispatch({
+      type: ACTIONS.DISABLE_ALL,
+      payload: null,
+    } as ActionInterface);
+  };
+
+  useEffect(() => dispatch({
+    type: ACTIONS.SET,
+    payload: games,
+  } as ActionInterface), [games]);
 
   return (
     <div className="App">
@@ -38,13 +41,16 @@ function App() {
           <p>Loading</p>
         ) : (
           <>
-          <Picker games={gamesPool} />
+            <Picker games={gamesPool} />
+            <div>
+              <button onClick={() => handleUnselectAll()}>Unselect all games</button>
+            </div>
             <ul>
               {gamesPool.map((game) => (
               <li key={game.slug}>
                 <label>
                   {game.name}
-                  <input type="checkbox" defaultChecked={game.isActive} onChange={() => handleGameClick(game)}/>
+                  <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
                 </label>
               </li>
               ))}
