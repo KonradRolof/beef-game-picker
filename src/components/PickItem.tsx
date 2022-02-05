@@ -19,8 +19,18 @@ function PickItem(props: PickItemProps) {
     <article className={clsx("PickItem", platformSlug )}>
       <div className="PickItem__title">{ game.name }</div>
       <div className="PickItem__info">
-        <span>{ game.genre }</span>,
-        <span>Players: { game.players }</span>
+        <span>{ game.genre }</span>{ ', ' }
+        <span>{ game.players } {1 < game.players ? 'Players' : 'Player'}</span>
+      </div>
+      <div className="PickItem__labels">
+        <span className="PickItem__label PickItem__label--platform">
+          { game.platform }
+          </span>
+        { game.multiDeviceNeeded && (
+          <span className="PickItem__label PickItem__label--multi">
+            Needs multiple devices
+          </span>
+        ) }
       </div>
       <div className="PickItem__veto">
         { 'function' === typeof onVeto && (
