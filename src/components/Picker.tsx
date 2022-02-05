@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Game from "../interfaces/Game.interface";
+import PickItem from "./PickItem";
 
 const DEFAULT_GAME_COUNT = 12;
 
@@ -32,6 +33,10 @@ function Picker(props: PickerProps) {
     });
   };
 
+  const onVetoAction = (game: Game) => {
+    setPicks((state) => state.filter((item) => item.slug !== game.slug));
+  };
+
   const buttonOptions = {} as any;
   if (picks.length === maxPicks) buttonOptions.disabled = 'disabled';
 
@@ -58,7 +63,9 @@ function Picker(props: PickerProps) {
           <h2>The games you play:</h2>
           <ul>
             { picks.map((game) => (
-              <li key={game.slug}>{game.name}</li>
+              <li key={game.slug}>
+                <PickItem game={game} onVeto={onVetoAction} />
+              </li>
             )) }
           </ul>
         </>
