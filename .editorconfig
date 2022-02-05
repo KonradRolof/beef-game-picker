@@ -1,6 +1,6 @@
 [*]
 indent_style = space
 
-[*.{ts,json}]
+[*.{ts,tsx,json}]
 end_of_line = lf
 indent_size = 2

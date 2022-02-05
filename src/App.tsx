@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Picker from './components/Picker';
 import useGames from './hooks/useGames.hook';
 import Game from './interfaces/Game.interface';
 
@@ -36,16 +37,19 @@ function App() {
         { 0 === gamesPool.length ? (
           <p>Loading</p>
         ) : (
-          <ul>
-            {gamesPool.map((game) => (
-            <li key={game.slug}>
-              <label>
-                {game.name}
-                <input type="checkbox" defaultChecked={game.isActive} onChange={() => handleGameClick(game)}/>
-              </label>
-            </li>
-            ))}
-          </ul>
+          <>
+          <Picker games={gamesPool} />
+            <ul>
+              {gamesPool.map((game) => (
+              <li key={game.slug}>
+                <label>
+                  {game.name}
+                  <input type="checkbox" defaultChecked={game.isActive} onChange={() => handleGameClick(game)}/>
+                </label>
+              </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
     </div>
