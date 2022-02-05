@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import './App.css';
 import Picker from './components/Picker';
 import useGames from './hooks/useGames.hook';
@@ -9,6 +9,7 @@ import gamePoolReducer, { ACTIONS } from './reducer/gamesPool.reducer';
 function App() {
   const games = useGames('./data/games.json');
   const [gamesPool, dispatch] = useReducer(gamePoolReducer, []);
+  const [showPool, setShowPool] = useState<boolean>(false);
 
   const handleGameClick = (game: Game) => {
     dispatch({
@@ -42,19 +43,30 @@ function App() {
         ) : (
           <>
             <Picker games={gamesPool} />
-            <div>
-              <button onClick={() => handleUnselectAll()}>Unselect all games</button>
-            </div>
-            <ul>
-              {gamesPool.map((game) => (
-              <li key={game.slug}>
-                <label>
-                  {game.name}
-                  <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
-                </label>
-              </li>
-              ))}
-            </ul>
+            <section className="games-pool">
+              <header className="games-pool__header">
+                <button onClick={() => setShowPool((state) => !state)}>
+                  { showPool ? 'Hide games pool' : 'Show games pool' }
+                </button>
+              </header>
+              { showPool && (
+                <>
+                  <div>
+                    <button onClick={() => handleUnselectAll()}>Unselect all games</button>
+                  </div>
+                  <ul>
+                    {gamesPool.map((game) => (
+                    <li key={game.slug}>
+                      <label>
+                        {game.name}
+                        <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
+                      </label>
+                    </li>
+                    ))}
+                  </ul>
+                </>
+              ) }
+            </section>
           </>
         )}
       </div>
