@@ -34,8 +34,8 @@ function App() {
     <div className="BeefGamePicker">
       <div className="BeefGamePicker__container">
         <header className="BeefGamePicker__header">
-          <h1>Royal Beef:
-            <span>Pick the Games</span>
+          <h1>Royal Beef
+            <span>Pick your Games</span>
           </h1>
         </header>
         <div>

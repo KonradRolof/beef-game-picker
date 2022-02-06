@@ -1,6 +1,7 @@
 @import './settings';
 @import './functions';
 @import './mixins';
+@import './fonts';
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,6 +15,7 @@
   background-color: $mat-background;
   box-sizing: border-box;
   color: $mat-foreground;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   min-height: 100vh;
   padding-bottom: 30px;
@@ -36,11 +38,17 @@
   padding: 30px 0;
 
   h1 {
+    color: $mat-accent-color;
+    line-height: 1;
     margin: 0;
+    text-transform: uppercase;
 
     span {
+      color: $mat-selection-foreground;
       display: block;
-      font-size: 0.6em;
+      font-size: 0.55em;
+      font-weight: 300;
+      text-transform: none;
     }
   }
 }
