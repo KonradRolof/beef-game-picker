@@ -1,27 +1,27 @@
-@import './settings';
+@import "./settings";
 
 .Picker_settings {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .Picker__cta {
-    margin-bottom: 30px;
-    text-align: center;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .Picker__warning {
-    align-items: center;
-    background-color: $mat-selection-background;
-    border: 2px dashed $mat-foreground;
-    border-radius: $ci-border-radius;
-    color: $mat-selection-foreground;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 150px;
-    width: 100%;
+  align-items: center;
+  background-color: $mat-selection-background;
+  border: 2px dashed $mat-foreground;
+  border-radius: $ci-border-radius;
+  color: $mat-selection-foreground;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  width: 100%;
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 }

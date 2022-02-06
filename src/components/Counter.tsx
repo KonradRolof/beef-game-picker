@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import { useState } from 'react';
 import Game from '../interfaces/Game.interface';
+import '../scss/Counter.scss';
 
 const DELAY_SECOND = 1000;
 const CLOSE_DELAY = 3000;
@@ -37,17 +38,19 @@ function Counter(props: CounterProps) {
 
   return (
     <section className="Counter">
-      { 0 < stepLeft ? (
-        <div className="Counter__counter">
-          <div className="Counter__step">
-            { stepLeft }
+      <div className="Counter__layer">
+        { 0 < stepLeft ? (
+          <div className="Counter__counter">
+            <div className="Counter__step">
+              { stepLeft }
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="Counter__pick">
-          { null !== game && game.title }
-        </div>
-      ) }
+        ) : (
+          <div className="Counter__pick">
+            { null !== game && game.title }
+          </div>
+        ) }
+      </div>
     </section>
   );
 }
