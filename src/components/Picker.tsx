@@ -7,6 +7,7 @@ import '../scss/Picker.scss';
 const DEFAULT_GAME_COUNT = 12;
 const DEFAULT_PICK_DELAY = 5;
 const MAX_PICK_DELAY = 10;
+const PICK_TIMEOUT = 150;
 
 type PickerProps = {
   games: Game[]
@@ -28,16 +29,14 @@ function Picker(props: PickerProps) {
   };
 
   const pickGame = () => {
+    let i = 0;
     if (picks.length >= maxPicks) return;
     let game: Game|null = null;
-    while (null === game) {
+    while (null === game && PICK_TIMEOUT >= i) {
+      i++;
       game = getRandomGame();
     }
-    setNewPick(game);
-    /*setPicks((state) => {
-      if (null !== game) return [...state, game];
-      return state;
-    });*/
+    if (null !== game) setNewPick(game);
   };
 
   const onVetoAction = (game: Game) => {
