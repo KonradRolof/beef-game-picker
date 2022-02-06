@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import slugify from 'slugify';
 import Game from '../interfaces/Game.interface';
+import '../scss/PickItem.scss';
 
 type PickItemProps = {
   game: Game;
@@ -20,12 +21,13 @@ function PickItem(props: PickItemProps) {
     <article className={clsx("PickItem", platformSlugs )}>
       <div className="PickItem__title">{ game.title }</div>
       <div className="PickItem__info">
-        <span>{ game.genre }</span>{ ', ' }
+        <span>{ game.genre }</span>
+        <span className="PickItem__divider">|</span>
         <span>{ game.players } {1 < game.players ? 'Players' : 'Player'}</span>
       </div>
       <div className="PickItem__labels">
         { game.platform.map((platform) => (
-            <span className={clsx("PickItem__label PickItem__label--platform", slugify(platform, {
+            <span className={clsx("PickItem__label PickItem__label--platform", 'PickItem__label--' + slugify(platform, {
               lower: true,
               strict: true,
             }))} key={platform}>
@@ -41,7 +43,9 @@ function PickItem(props: PickItemProps) {
       </div>
       <div className="PickItem__veto">
         { 'function' === typeof onVeto && (
-          <button onClick={() => onVeto(game)}>Use veto</button>
+          <button onClick={() => onVeto(game)}>
+            <span>Use veto</span>
+          </button>
         ) }
       </div>
     </article>

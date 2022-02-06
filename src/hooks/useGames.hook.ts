@@ -18,8 +18,8 @@ export default function useGames(url: string): Game[] {
       axios.get(url)
         .then((response) => {
           const data = response.data as CsvData[];
-          const gameData = data.map((item, index: number) => {
-            return {
+          const gameData: Game[] = data.map((item, index: number) => {
+            const game = {
               title: item.title,
               genre: item.genre,
               platform: item.platform.split(',').map((entry) => entry.trim()),
@@ -32,6 +32,8 @@ export default function useGames(url: string): Game[] {
                 strict: true,
               }),
             } as Game;
+            if (!game.platform.length) game.platform.push('not defined');
+            return game;
           });
           setGames(gameData);
         })

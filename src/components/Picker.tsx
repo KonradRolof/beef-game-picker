@@ -98,7 +98,7 @@ function Picker(props: PickerProps) {
       { 0 < picks.length ? (
         <>
           <h2>The games you play:</h2>
-          <ul>
+          <ul className="Picker__picks">
             { picks.map((game) => (
               <li key={game.slug}>
                 <PickItem game={game} onVeto={onVetoAction} />

@@ -1,0 +1,133 @@
+@import './settings';
+@import './functions';
+@import './mixins';
+
+.PickItem {
+  background-color: $mat-light-background;
+  border: 1px solid $mat-light-border;
+  border-radius: $ci-border-radius;
+  box-shadow: 0 1px 2px rgba($black, 0.15),
+    0 2px 3px rgba($black, 0.15),
+    0 3px 5px rgba($black, 0.15),
+    0 5px 8px rgba($black, 0.15);
+  color: $mat-light-text;
+  display: grid;
+  grid-template:
+    [row1-start] 'labels veto' auto [row1-end]
+    [row2-start] 'title veto' auto [row2-end]
+    [row3-start] 'info veto' auto [row3-end]
+    / auto 40px;
+  margin-bottom: 1rem;
+}
+
+.PickItem__title {
+  color: $mat-light-foreground;
+  font-size: #{koro-rem-calc(20)};
+  font-weight: 200;
+  grid-area: title;
+  padding: 5px 20px;
+
+  @include koro-breakpoint(md) {
+    font-size: #{koro-rem-calc(22)};
+  }
+}
+
+.PickItem__info {
+  font-size: #{koro-rem-calc(10)};
+  grid-area: info;
+  line-height: 1.2;
+  padding: 0 20px 5px;
+
+  @include koro-breakpoint(sm) {
+    font-size: #{koro-rem-calc(14)};
+  }
+}
+
+.PickItem__divider {
+  margin: 0.5em;
+}
+
+.PickItem__veto {
+  align-self: center;
+  grid-area: veto;
+
+  button {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: $mat-light-text;
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0 0 0.3rem;
+    padding: 5px;
+    transition: color .2s;
+    width: 40px;
+  
+    &:hover,
+    &:active {
+      color: $mat-light-red-color;
+    }
+
+    &::before {
+      display: block;
+      content: '+';
+      font-size: #{koro-rem-calc(30)};
+      font-weight: 900;
+      transform: rotate(45deg);
+    }
+  }
+
+  span {
+    @include koro-sr-only;
+  }
+}
+
+.PickItem__labels {
+  display: flex;
+  grid-area: labels;
+  padding: 0 20px 2px;
+}
+
+.PickItem__label {
+  background-color: $mat-light-accent-color;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba($black, 0.15),
+    0 2px 3px rgba($black, 0.15);
+  color: $mat-light-second-background;
+  display: inline-block;
+  font-size: #{koro-rem-calc(9)};
+  line-height: 1.1;
+  margin: -5px 0.8em 0 0;
+  padding: 0.3em 0.8em 0.4em;
+
+  @include koro-breakpoint(sm) {
+    font-size: #{koro-rem-calc(12)};
+  }
+}
+
+@each $brand in $brands {
+  $name: nth($brand, 1);
+  $value: nth($brand, 2);
+
+  .PickItem__label--#{$name} {
+    background-color: $value;
+  }
+}
+
+@for $i from 1 through 5 {
+  .PickItem__label--play-station-#{$i} {
+    background-color: $brand-playstation;
+  }
+}
+
+.PickItem__label--snes,
+.PickItem__label--switch {
+  background-color: $brand-nintendo;
+}
+
+.PickItem__label--multi {
+  background-color: $mat-light-red-color;
+}

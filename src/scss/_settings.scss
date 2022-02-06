@@ -1,6 +1,7 @@
 $ci-primary: #f07178;
 $ci-darkest: #212121;
 
+// Material Oceanic
 $mat-background: #263238;
 $mat-foreground: #B0BEC5;
 $mat-text: #607D8B;
@@ -17,6 +18,51 @@ $mat-tree: #546E7A70;
 $mat-notifications: #1E272C;
 $mat-accent-color: #009688;
 $mat-excluded-files-color: #2E3C43;
+
+// Material Lighter
+$mat-light-background: #FAFAFA;
+$mat-light-foreground: #546E7A;
+$mat-light-text: #94A7B0;
+$mat-light-selection-background: #80CBC440;
+$mat-light-selection-foreground: #546e7a;
+$mat-light-buttons: #F3F4F5;
+$mat-light-second-background: #FFFFFF;
+$mat-light-disabled: #D2D4D5;
+$mat-light-contrast: #EEEEEE;
+$mat-light-active: #E7E7E8;
+$mat-light-border: #d3e1e8;
+$mat-light-highlight: #E7E7E8;
+$mat-light-tree: #80CBC440;
+$mat-light-notifications: #eae8e8;
+$mat-light-accent-color: #00BCD4;
+$mat-light-excluded-files-color: #CCD7DA50;
+
+$mat-light-green-color: #c3e88d;
+$mat-light-yellow-color: #ffcb6b;
+$mat-light-blue-color: #82aaff;
+$mat-light-red-color: #f07178;
+$mat-light-purple-color: #c792ea;
+$mat-light-orange-color: #f78c6c;
+$mat-light-cyan-color: #89ddff;
+$mat-light-gray-color: #616161;
+$mat-light-white-black-color: #eeffff;
+$mat-light-error-color: #ff5370;
+
+// Brands
+$brand-xbox: #52b043;
+$brand-playstation: #003087;
+$brand-nintendo: #e60012;
+$brand-steam: #00adee;
+$brand-epic: rgb(42 42 42);
+
+$brands: (
+  xbox: $brand-xbox,
+  playstation: $brand-playstation,
+  nintendo: $brand-nintendo,
+  pc-steam: $brand-steam,
+  pc-epic: $brand-epic,
+  pc-gamepass: $brand-xbox
+);
 
 $white: #fff;
 $black: #000;
