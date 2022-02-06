@@ -1,10 +1,14 @@
-@import "./settings";
+@import './settings';
+@import './functions';
+@import './mixins';
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+@include apply-font-sizes($elements-font-sizes);
 
 .BeefGamePicker {
   background-color: $mat-background;

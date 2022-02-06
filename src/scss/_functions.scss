@@ -1,0 +1,149 @@
+@use 'sass:math';
+
+// Remove the unit of a length
+//
+// @example
+// strip-unit(16px) => 16
+//
+// @param {Number} $number - number to remove unit from
+// @return {Number} - unitless number
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Normalize global base font size as unitless pixel value
+//
+// @example
+// koro-normalize-font-base(18px) => 18
+// koro-normalize-font-base(1rem) => 16
+// koro-normalize-font-base(100%) => 16
+//
+// @param {Number} $fb - font-size property
+// @return {Number} - pixel value without unit
+
+@function koro-normalize-font-base($fb) {
+  @if unitless($fb) {
+    @return $fb;
+  } @else if unit($fb) == "px" {
+    @return strip-unit($fb);
+  } @else if unit($fb) == "rem" {
+    @return strip-unit($fb) * 16;
+  } @else if unit($fb) == "%" {
+    @return math.div(strip-unit($fb) * 16, 100);
+  }
+}
+
+// Calculate one or multiple pixel values as rem values
+//
+// @example
+// koro-rem-calc(16px) => 1rem
+// koro-rem-calc(10 auto 20) => 0.625rem auto 1.25rem
+//
+// @param {List|Number} - values to calculate
+// @return {List|Number} - single rem value or list of rem values
+
+@function koro-rem-calc($values) {
+  $font-size-base: 16 !default;
+  $value-list: null;
+
+  @each $val in $values {
+    @if type-of($val) == "number" {
+      $value-list: append($value-list, math.div(strip-unit($val), koro-normalize-font-base($font-size-base)) + "rem");
+    } @else {
+      $value-list: append($value-list, $val);
+    }
+  }
+
+  @return join($value-list, null, space);
+}
+
+// Function to get next map item
+// returns next map item or fallback value if map, key or next item does not exist
+//
+// @author Simon Koch <agorilla@me.com>
+//
+// Licensed under the MIT license.
+//
+// @param {Map} $map - Sass list map
+// @param {String} $key - List map key/// @param {String} $fallback (false) - Fallback value if map, key or next item does not exist
+// @param {String} $return (value) - Return value or key of next list item
+//
+// @example
+// $map: (
+//   a: 100px,
+//   b: 200px
+// );
+//
+// .foo { width: map-get-next($map, a); } => .foo { width: 200px; }
+// .bar { width: map-get-next($map, b, auto); } => .bar { width: auto; }
+
+@function map-get-next($map, $key, $fallback: false, $return: value) {
+
+  // Check if map is valid
+  @if type-of($map) == map {
+
+    // Check if key exists in map
+    @if map-has-key($map, $key) {
+
+      // Init index counter variable
+      $i: 0;
+
+      // Init key index
+      $key-index: false;
+
+      // Traverse map for key
+      @each $map-key, $map-value in $map {
+        // Update index
+        $i: $i + 1;
+
+        // If map key found, set key index
+        @if $map-key == $key {
+          $key-index: $i;
+        }
+
+        // If next index return next value or key based on $return
+        @if $i == $key-index + 1 {
+          @if $return == key {
+            @return $map-key;
+          } @else {
+            @return $map-value;
+          }
+        }
+
+        // If last entry return false
+        @if $i == length($map) {
+          @return $fallback;
+        }
+      }
+
+      @warn "No next map item for key #{$key}";
+
+      @return $fallback;
+    }
+
+    @warn "No valid key #{$key} in map";
+
+    @return $fallback;
+  }
+
+  @warn "No valid map";
+
+  @return $fallback;
+}
+
+// Convert unitless font-sizes or sizes in pixels to rem values
+//
+// @param {number} $font-size
+
+@mixin koro-set-fz-prop($font-size) {
+  @if unit($font-size) == "px" or unitless($font-size) {
+    font-size: #{koro-rem-calc($font-size)};
+  } @else {
+    font-size: #{$font-size};
+  }
+}

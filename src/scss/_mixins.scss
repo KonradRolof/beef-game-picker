@@ -1,0 +1,204 @@
+@import './functions';
+
+// return @media breakpoint with min- or max-width
+//
+// @param {Number|String|List} $query - Number as pixel value or breakpoint string or query list [$start, ($stop, $direction)]
+//
+// @example
+// @include koro-breakpoint(lg) { ... } => @media only screen and (min-width: 64rem) { ... }
+// @include koro-breakpoint(md max) { ... } => @media only screen and (max-width: 64rem) { ... }
+// @include koro-breakpoint(360px) { ... } => @media only screen and (min-width: 22.5rem) { ... }
+// @include koro-breakpoint(sm only) { ... } => @media only screen and (min-width: 40rem) and (max-width: 47.99375rem) { ... }
+// @include koro-breakpoint(md lg between) { ... } => @media only screen and (min-width: 48rem) and (max-width: 74.99375rem) { ... }
+// @include koro-breakpoint(200 600 between) { ... } => @media only screen and (min-width: 12.5rem) and (max-width: 37.5rem) { ... }
+
+// default breakpoints, could be overwritten in settings
+$breakpoint-map: (
+  xs: 0,
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
+  xxl: 1600
+) !default;
+
+@mixin koro-breakpoint($query) {
+  $breakpoint: $query;
+  $stop: xl;
+  $direction: min;
+
+  @if "list" == type-of($query) {
+    @if 2 == length($query) {
+      $breakpoint: nth($query, 1);
+      $direction: nth($query, 2);
+    } @else {
+      $breakpoint: nth($query, 1);
+      $stop: nth($query, 2);
+      $direction: nth($query, 3);
+    }
+  }
+
+  @if "number" == type-of($direction) {
+    $stop: nth($query, 2);
+    $direction: between;
+  }
+
+  @if map-has-key($breakpoint-map, $breakpoint) {
+    @if between == $direction {
+      $max-width: map-get-next($breakpoint-map, $stop, $fallback: 10000px) - .1;
+
+      @media only screen and (min-width: #{koro-rem-calc(map-get($breakpoint-map, $breakpoint))}) and (max-width: #{koro-rem-calc($max-width)}) {
+        @content;
+      }
+    } @else if only == $direction {
+      $max-width: map-get-next($breakpoint-map, $breakpoint, $fallback: 10000px) - .1;
+
+      @media only screen and (min-width: #{koro-rem-calc(map-get($breakpoint-map, $breakpoint))}) and (max-width: #{koro-rem-calc($max-width)}) {
+        @content;
+      }
+    } @else if max == $direction {
+      $max-width: map-get-next($breakpoint-map, $breakpoint, $fallback: 10000px) - .1;
+
+      @media only screen and (max-width: #{koro-rem-calc($max-width)}) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: #{koro-rem-calc(map-get($breakpoint-map, $breakpoint))}) {
+        @content;
+      }
+    }
+  } @else {
+    @if "number" == type-of($stop) {
+      @media only screen and (min-width: #{koro-rem-calc($breakpoint)}) and (max-width: #{koro-rem-calc($stop)}) {
+        @content;
+      }
+    } @else {
+      @media only screen and (#{$direction}-width: #{koro-rem-calc($breakpoint)}) {
+        @content;
+      }
+    }
+  }
+}
+
+// Adds ratio based padding-top value to an element
+//
+// @param {number} $x - ratio width
+// @param {number} $y - ratio height
+//
+// @usage:
+// div { @include ratio(16, 9); }
+//
+// @output:
+// div {
+//   padding-top: 56.25%;
+//   width: 100%;
+// }
+
+@mixin ratio($x, $y) {
+  $padding: unquote(($y / $x) * 100 + "%");
+  padding-top: $padding;
+  width: 100%;
+}
+
+// screen reader only content
+//
+// @example
+// .sr-only { @include koro-sr-only; }
+
+@mixin koro-sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Loop through breakpoint map and apply value to CSS property
+//
+// @param {string} $prop
+// @param {map} $map
+
+@mixin koro-apply-values-from-map($prop, $map) {
+  @each $item in $map {
+    $breakpoint-name: nth($item, 1);
+
+    @if "xs" == $breakpoint-name or "small" == $breakpoint-name {
+      #{$prop}: #{nth($item, 2)};
+    } @else {
+      @include koro-breakpoint($breakpoint-name) {
+        #{$prop}: #{nth($item, 2)};
+      }
+    }
+  }
+}
+
+// Loop through breakpoint map
+//
+// @param {map} $sizes - key = breakpoint, value = font-size
+
+@mixin koro-responsive-font-size($sizes) {
+  @each $bp in $sizes {
+    $query: nth($bp, 1);
+    $fz: nth($bp, 2);
+
+    @if "xs" == $query or "small" == $query {
+      @include koro-set-fz-prop($fz);
+    } @else {
+      @include koro-breakpoint($query) {
+        @include koro-set-fz-prop($fz);
+      }
+    }
+  }
+}
+
+// Loop to apply sizes from SCSS map to elements as font-sizes
+//
+// @param {Map} - elements map: key = tag name, value = breakpoint map
+//
+// @usage:
+// $my-font-sizes: {
+//   h1: (
+//     xs: 20,
+//     md: 26,
+//     xl: 34
+//   ),
+//   p: (
+//     xs: 16,
+//     lg: 18
+//   )
+// };
+// @include apply-font-sizes($my-font-sizes);
+//
+// @output:
+// h1 {
+//   font-size: 1.25rem
+//   @media only screen and (min-width: 48rem) {
+//     font-size: 1.625rem
+//   }
+//   @media only screen and (min-width: 75rem) {
+//     font-size: 2.125rem
+//   }
+// }
+//
+// p {
+//   font-size: 1rem
+//   @media only screen and (min-width: 64rem) {
+//     font-size: 1.125rem
+//   }
+// }
+
+@mixin apply-font-sizes($sizes-map) {
+  @each $element in $sizes-map {
+    $tag-name: nth($element, 1);
+    $elm-bps: nth($element, 2);
+
+    #{$tag-name},
+    .#{$tag-name} {
+      @include koro-responsive-font-size($elm-bps);
+    }
+  }
+}

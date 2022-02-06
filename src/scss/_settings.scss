@@ -20,3 +20,15 @@ $white: #fff;
 $black: #000;
 
 $ci-border-radius: 3px;
+
+$elements-font-sizes: (
+  h1: (
+    xs: 20,
+    sm: 35,
+    md: 55
+  ),
+  p: (
+    xs: 18,
+    md: 20
+  )
+)
