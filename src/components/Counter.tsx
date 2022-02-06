@@ -16,8 +16,10 @@ function Counter(props: CounterProps) {
   const { game, delayTime, onCountdownEnd } = props;
   const isMounted = useRef(0); // https://www.akashmittal.com/cant-perform-react-state-update-unmounted-component/
   const [stepLeft, setStepLeft] = useState<number>(delayTime);
+  const stepElm = useRef<any>();
   const counterAction = useCallback(() => {
     if (0 < stepLeft) {
+      stepElm.current.classList.add('blink');
       setTimeout(() => {
         setStepLeft((state) => state - 1);
       }, DELAY_SECOND);
@@ -41,7 +43,7 @@ function Counter(props: CounterProps) {
       <div className="Counter__layer">
         { 0 < stepLeft ? (
           <div className="Counter__counter">
-            <div className="Counter__step">
+            <div className="Counter__step" ref={stepElm}>
               { stepLeft }
             </div>
           </div>

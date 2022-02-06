@@ -1,4 +1,6 @@
 @import './settings';
+@import './functions';
+@import './mixins';
 
 .Counter {
   align-items: flex-start;
@@ -30,7 +32,78 @@
   justify-content: center;
   margin-top: 15vh;
   min-width: 280px;
-  max-width: 500px;
+  max-width: 600px;
   padding: 30px;
   width: 50vw;
+}
+
+.Counter__counter {
+  max-width: 200px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    border: 4px solid $mat-accent-color;
+    border-radius: 50%;
+    content: ' ';
+    display: block;
+    padding-top: 100%;
+    width: 100%;
+  }
+}
+
+.Counter__step {
+  align-items: center;
+  color: $mat-selection-foreground;
+  display: flex;
+  height: 100%;
+  font-size: #{koro-rem-calc(30)};
+  font-weight: 900;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @include koro-breakpoint(md) {
+    font-size: #{koro-rem-calc(65)};
+  }
+
+  &.blink {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+  }
+}
+
+.Counter__pick {
+  color: $mat-selection-foreground;
+  font-size: #{koro-rem-calc(24)};
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+
+  @include koro-breakpoint(md) {
+    font-size: #{koro-rem-calc(54)};
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+
+  7% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
