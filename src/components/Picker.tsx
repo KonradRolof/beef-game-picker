@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import Game from "../interfaces/Game.interface";
-import Counter from "./Counter";
-import PickItem from "./PickItem";
+import React, { useState } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage.hook';
+import Game from '../interfaces/Game.interface';
+import Counter from './Counter';
+import PickItem from './PickItem';
 import '../scss/Picker.scss';
 
 const DEFAULT_GAME_COUNT = 12;
@@ -14,7 +15,7 @@ type PickerProps = {
 }
 
 function Picker(props: PickerProps) {
-  const [picks, setPicks] = useState<Game[]>([]);
+  const [picks, setPicks] = useLocalStorage<Game[]>('picks', []);
   const [maxPicks, setMaxPicks] = useState<number>(DEFAULT_GAME_COUNT);
   const [pickDelay, setPickDelay] = useState<number>(DEFAULT_PICK_DELAY);
   const [newPick, setNewPick] = useState<Game|null>(null);
@@ -83,10 +84,14 @@ function Picker(props: PickerProps) {
       </div>
       <div className="Picker__cta">
         <button
-          className="btn"
+          className="btn btn--pick"
           onClick={() => pickGame()}
           { ...buttonOptions }
         >Select game</button>
+        <button
+          className="btn btn--clear"
+          onClick={() => setPicks([])}
+        >Clear all</button>
       </div>
       { null !== newPick && (
         <Counter
@@ -99,7 +104,7 @@ function Picker(props: PickerProps) {
         <>
           <h2>The games you play:</h2>
           <ul className="Picker__picks">
-            { picks.map((game) => (
+            { picks.reverse().map((game) => (
               <li key={game.slug}>
                 <PickItem game={game} onVeto={onVetoAction} />
               </li>

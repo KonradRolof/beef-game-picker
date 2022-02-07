@@ -19,10 +19,12 @@ export default function useGames(url: string): Game[] {
         .then((response) => {
           const data = response.data as CsvData[];
           const gameData: Game[] = data.map((item, index: number) => {
-            const game = {
+            return {
               title: item.title,
               genre: item.genre,
-              platform: item.platform.split(',').map((entry) => entry.trim()),
+              platform: item.platform.split(',').map((entry) => {
+                if ('' === entry) return 'not defined';
+                return entry.trim();}),
               players: item.players,
               multiDeviceNeeded: item.multiDeviceNeeded === "TRUE",
               isActive: true,
@@ -32,8 +34,6 @@ export default function useGames(url: string): Game[] {
                 strict: true,
               }),
             } as Game;
-            if (!game.platform.length) game.platform.push('not defined');
-            return game;
           });
           setGames(gameData);
         })

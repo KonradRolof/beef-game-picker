@@ -4,7 +4,7 @@ import Game from '../interfaces/Game.interface';
 import '../scss/Counter.scss';
 
 const DELAY_SECOND = 1000;
-const CLOSE_DELAY = 3000;
+const CLOSE_DELAY = 2000;
 
 type CounterProps = {
   game: Game|null;
