@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import slugify from 'slugify';
 import Game from '../interfaces/Game.interface';
 import '../scss/PickItem.scss';
 
@@ -11,14 +10,8 @@ type PickItemProps = {
 
 function PickItem(props: PickItemProps) {
   const { game, onVeto } = props;
-  const platformSlugs: string[] = game.platform.map((platform) => slugify(platform, {
-    lower: true,
-    strict: true,
-  }));
-  if (0 === platformSlugs.length) platformSlugs.push("undefined platform");
-
   return (
-    <article className={clsx("PickItem", platformSlugs )}>
+    <article className={"PickItem"}>
       <div className="PickItem__title">{ game.title }</div>
       <div className="PickItem__info">
         <span>{ game.genre }</span>
@@ -26,15 +19,14 @@ function PickItem(props: PickItemProps) {
         <span>{ game.players } {1 < game.players ? 'Players' : 'Player'}</span>
       </div>
       <div className="PickItem__labels">
-        { game.platform.map((platform) => (
-            <span className={clsx("PickItem__label PickItem__label--platform", 'PickItem__label--' + slugify(platform, {
-              lower: true,
-              strict: true,
-            }))} key={platform}>
-              { platform }
-            </span>
-          ))
-        }
+        { game.platforms.map((platform) => (
+          <span
+            className={clsx("PickItem__label PickItem__label--platform", 'PickItem__label--' + platform.slug)}
+            key={platform.slug}
+          >
+            { platform.name }
+          </span>
+        )) }
         { game.multiDeviceNeeded && (
           <span className="PickItem__label PickItem__label--multi">
             Needs multiple devices

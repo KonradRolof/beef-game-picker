@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import slugify from 'slugify';
 import Game from '../interfaces/Game.interface';
+import Platform from '../interfaces/Platform.interface';
 
 type CsvData = {
   title: string;
@@ -18,13 +19,21 @@ export default function useGames(url: string): Game[] {
       axios.get(url)
         .then((response) => {
           const data = response.data as CsvData[];
-          const gameData: Game[] = data.map((item, index: number) => {
+          const gameData: Game[] = data.map((item: CsvData, index: number) => {
             return {
               title: item.title,
               genre: item.genre,
-              platform: item.platform.split(',').map((entry) => {
-                if ('' === entry) return 'not defined';
-                return entry.trim();}),
+              platforms: item.platform.split(',').map((entry) => {
+                let platform = entry.trim();
+                if ('' === entry) platform = 'not defined';
+                if (/http(s)?:/.test(entry)) platform = 'Web';
+                return {
+                  name: platform,
+                  slug: slugify(platform, {
+                    lower: true,
+                    strict: true,
+                  }),
+                } as Platform;}),
               players: item.players,
               multiDeviceNeeded: item.multiDeviceNeeded === "TRUE",
               isActive: true,
