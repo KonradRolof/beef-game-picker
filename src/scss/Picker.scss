@@ -1,12 +1,30 @@
-@import "./settings";
+@import './settings';
+@import './functions';
+@import './mixins';
 
 .Picker_settings {
   margin-bottom: 30px;
 }
 
 .Picker__cta {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
-  text-align: center;
+
+  .btn--pick {
+    @include button($white, $mat-accent-color);
+    font-size: #{koro-rem-calc(22)};
+    margin: 0 1rem 0 0;
+
+    @include koro-breakpoint(sm) {
+      font-size: #{koro-rem-calc(26)};
+    }
+  }
+
+  .btn--clear {
+    @include button($mat-foreground, $mat-buttons);
+  }
 }
 
 .Picker__warning {
