@@ -30,14 +30,18 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">5%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.13.2 <17.0.0"
   }
 }
