@@ -29,7 +29,7 @@
 
 .BeefGamePicker__container {
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 780px;
   padding: 0 20px;
   width: 100%;
 }
@@ -81,13 +81,13 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin: 0 -3px;
     padding: 0;
   }
 
   li {
-    margin: 0;
-    padding: 0;
+    margin: 0 0 6px;
+    padding: 0 3px;
     width: 25%;
   }
 }

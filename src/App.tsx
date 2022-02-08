@@ -5,6 +5,7 @@ import useGames from './hooks/useGames.hook';
 import ActionInterface from './interfaces/Action.interface';
 import Game from './interfaces/Game.interface';
 import gamePoolReducer, { ACTIONS } from './reducer/gamesPool.reducer';
+import PoolItem from './components/PoolItem';
 
 function App() {
   const games = useGames('./data/games.json');
@@ -63,14 +64,14 @@ function App() {
                     </div>
                     <div className="games-pool__body">
                       <ul>
-                        {gamesPool.map((game) => (
-                        <li key={game.slug}>
-                          <label>
-                            {game.title}
-                            <input type="checkbox" checked={game.isActive} onChange={() => handleGameClick(game)}/>
-                          </label>
-                        </li>
-                        ))}
+                        { gamesPool.map((game) => (
+                          <li key={ game.slug }>
+                            <PoolItem
+                              game={ game }
+                              onChange={(game: Game) => handleGameClick(game)}
+                            />
+                          </li>
+                        )) }
                       </ul>
                     </div>
                   </>

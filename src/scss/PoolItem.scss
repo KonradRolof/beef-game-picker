@@ -1,0 +1,122 @@
+@import './settings';
+@import './functions';
+@import './mixins';
+
+.PoolItem {
+  align-items: stretch;
+  background-color: $mat-light-background;
+  border-radius: $ci-border-radius;
+  color: $mat-light-foreground;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  label {
+    cursor: pointer;
+    display: grid;
+    grid-template:
+      [row1-start] 'header' 97px [row1-end]
+      [row2-start] 'body' auto [row2-end]
+      / 100%;
+    width: 100%;
+  }
+
+  &--disabled {
+    background-color: $mat-light-disabled;
+  }
+}
+
+.PoolItem__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  justify-content: center;
+  padding: 12px 12px 10px;
+  position: relative;
+
+  h3 {
+    color: $mat-notifications;
+    font-size: #{koro-rem-calc(15)};
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 0 0 0.2em;
+    text-align: center;
+
+    .PoolItem--disabled & {
+      color: $mat-light-foreground;
+    }
+  }
+}
+
+.PoolItem__genre {
+  color: $mat-light-text;
+  font-size: #{koro-rem-calc(11)};
+}
+
+.PoolItem__device-label {
+  background-color: $mat-light-red-color;
+  border-radius: 5px;
+  color: $mat-light-second-background;
+  font-size: #{koro-rem-calc(8)};
+  line-height: 1.1;
+  padding: 0.3em 0.8em;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -2px);
+
+  .PoolItem--disabled & {
+    background-color: desaturate($mat-light-red-color, 100%);
+    color: $mat-light-contrast;
+  }
+}
+
+.PoolItem__body {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: body;
+  justify-content: center;
+  padding: 0 12px 12px;
+}
+
+.PoolItem__platform-label {
+  background-color: $mat-light-accent-color;
+  border-radius: 5px;
+  color: $mat-light-second-background;
+  display: inline-block;
+  font-size: #{koro-rem-calc(10)};
+  line-height: 1.1;
+  margin: 0.2em;
+  padding: 0.3em 0.8em;
+  top: 0;
+
+  .PoolItem--disabled & {
+    background-color: $mat-light-text;
+    color: $mat-light-contrast;
+  }
+}
+
+@each $brand in $brands {
+  $name: nth($brand, 1);
+  $value: nth($brand, 2);
+
+  .PoolItem__platform-label--#{$name} {
+    background-color: $value;
+  }
+}
+
+@for $i from 1 through 5 {
+  .PoolItem__platform-label--play-station-#{$i} {
+    background-color: $brand-playstation;
+  }
+}
+
+.PoolItem__platform-label--snes,
+.PoolItem__platform-label--switch {
+  background-color: $brand-nintendo;
+}
+
+.PoolItem__footer {
+  @include koro-sr-only;
+}
