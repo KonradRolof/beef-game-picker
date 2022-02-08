@@ -71,7 +71,7 @@
   },
   {
     "title": "Nidhogg",
-    "platform": "PC Steam",
+    "platform": "Steam",
     "genre": "Indi Action",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -99,14 +99,14 @@
   },
   {
     "title": "Bomberman",
-    "platform": "",
+    "platform": "Switch",
     "genre": "Indi Action",
     "players": 4,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Super Street Fighter",
-    "platform": "SNES",
+    "platform": "SNES, Xbox, Steam",
     "genre": "Beat 'em up 2D",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -120,7 +120,7 @@
   },
   {
     "title": "Lance A Lot",
-    "platform": "PC Steam",
+    "platform": "Steam",
     "genre": "Indi Action",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -134,7 +134,7 @@
   },
   {
     "title": "Dodgeball Academia",
-    "platform": "Xbox",
+    "platform": "Xbox, Switch, Play Station 4",
     "genre": "Arcade Sport",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -155,14 +155,14 @@
   },
   {
     "title": "Gang Beasts",
-    "platform": "Xbox, PC Steam",
+    "platform": "Xbox, Steam",
     "genre": "Brawler",
     "players": 4,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Tetris Effects Connected",
-    "platform": "Xbox",
+    "platform": "Xbox, Switch",
     "genre": "Puzzle",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -211,13 +211,13 @@
   },
   {
     "title": "Rayman Legends Kung Foot",
-    "platform": "Xbox",
+    "platform": "Xbox, Play Station 4",
     "genre": "Indi Action",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
   },
   {
-    "title": "Injustice",
+    "title": "Injustice 2",
     "platform": "Xbox",
     "genre": "Beat 'em up 2D",
     "players": 2,
@@ -232,7 +232,7 @@
   },
   {
     "title": "Castle Crashers",
-    "platform": "",
+    "platform": "PlayStation 4, Xbox, Switch, Steam",
     "genre": "Brawler",
     "players": 4,
     "multiDeviceNeeded": "FALSE"
@@ -281,7 +281,7 @@
   },
   {
     "title": "Hellish Quart",
-    "platform": "PC Steam",
+    "platform": "Steam",
     "genre": "Beat 'em up 3D",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
@@ -316,35 +316,35 @@
   },
   {
     "title": "Blobby Volley",
-    "platform": "Web",
+    "platform": "http://blobbyvolley.de/data/bv2browser/",
     "genre": "Arcade Sport",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Red Faction",
-    "platform": "",
+    "platform": "Play Station 3",
     "genre": "Indi Action",
     "players": 1,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Speedrunners",
-    "platform": "PC",
+    "platform": "Steam",
     "genre": "Jump 'n' Run",
     "players": 4,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Rocket League",
-    "platform": "",
+    "platform": "Xbox, Play Station 4",
     "genre": "Arcade Sport",
     "players": 2,
     "multiDeviceNeeded": "FALSE"
   },
   {
     "title": "Towerfall",
-    "platform": "",
+    "platform": "Play Station 4, Xbox",
     "genre": "Indi Action",
     "players": 4,
     "multiDeviceNeeded": "FALSE"
@@ -365,7 +365,7 @@
   },
   {
     "title": "Starcraft 2",
-    "platform": "PC Battlenet",
+    "platform": "Battlenet",
     "genre": "Strategy",
     "players": 4,
     "multiDeviceNeeded": "TRUE"
@@ -395,7 +395,7 @@
     "title": "Clumsy Rush",
     "platform": "Xbox",
     "genre": "Indi Action",
-    "players": "",
+    "players": 4,
     "multiDeviceNeeded": "FALSE"
   },
   {
@@ -407,9 +407,86 @@
   },
   {
     "title": "Age of Empires IV",
-    "platform": "PC Gamepass",
+    "platform": "PC Gamepass, Steam",
     "genre": "Strategy",
     "players": 4,
     "multiDeviceNeeded": "TRUE"
+  },
+  {
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "UFC",
+    "platform": "Xbox",
+    "genre": "Sport Sim",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Stick Fight: The Game",
+    "platform": "Steam",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Naruto Shippuden: Ultimate Ninja Storm 4",
+    "platform": "Xbox",
+    "genre": "Beat 'em up 3D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Tricky Towers",
+    "platform": "Steam, Switch",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Move or Die",
+    "platform": "Steam",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Lethal League",
+    "platform": "Steam, Xbox",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "BlazBlue",
+    "platform": "Play Station 4",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "What the Golf",
+    "platform": "Steam",
+    "genre": "Indi Action",
+    "players": 2,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Genital Jousting",
+    "platform": "Steam",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
+  },
+  {
+    "title": "Party Panic",
+    "platform": "Steam, Xbox, Play Station 4",
+    "genre": "Indi Action",
+    "players": 4,
+    "multiDeviceNeeded": "FALSE"
   }
 ]
