@@ -5,6 +5,7 @@
 .Counter {
   align-items: flex-start;
   background-color: rgba($mat-contrast, 0.85);
+  backdrop-filter: blur(3px);
   display: flex;
   height: 100vh;
   justify-content: center;
