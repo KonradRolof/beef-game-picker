@@ -55,31 +55,35 @@ function Picker(props: PickerProps) {
   const buttonOptions = {} as any;
   if (picks.length === maxPicks) buttonOptions.disabled = 'disabled';
 
+  const picksList: Game[] = [ ...picks ].reverse();
+
   return (
     <section className="Picker">
-      <div className="Picker_settings">
-        <div className="form-control">
-          <label htmlFor="picker-game-count">How many games should be picked?</label>
-          <input
-            type="number"
-            id="picker-game-count"
-            defaultValue={maxPicks}
-            min={1}
-            step={1}
-            onChange={(event) => setMaxPicks(parseInt(event.target.value))}
-          />
-        </div>
-        <div className="form-control">
-          <label htmlFor="picker-pick-delay">Surprise delay (seconds)</label>
-          <input
-            type="number"
-            id="picker-pick-delay"
-            defaultValue={pickDelay}
-            min={0}
-            max={MAX_PICK_DELAY}
-            step={1}
-            onChange={(event) => setPickDelay(parseInt(event.target.value))}
-          />
+      <div className="Picker__form">
+        <div className="Picker_settings">
+          <div className="form-control">
+            <label htmlFor="picker-game-count">How many games should be picked?</label>
+            <input
+              type="number"
+              id="picker-game-count"
+              defaultValue={maxPicks}
+              min={1}
+              step={1}
+              onChange={(event) => setMaxPicks(parseInt(event.target.value))}
+            />
+          </div>
+          <div className="form-control">
+            <label htmlFor="picker-pick-delay">Surprise delay (seconds)</label>
+            <input
+              type="number"
+              id="picker-pick-delay"
+              defaultValue={pickDelay}
+              min={0}
+              max={MAX_PICK_DELAY}
+              step={1}
+              onChange={(event) => setPickDelay(parseInt(event.target.value))}
+            />
+          </div>
         </div>
       </div>
       <div className="Picker__cta">
@@ -102,9 +106,12 @@ function Picker(props: PickerProps) {
       ) }
       { 0 < picks.length ? (
         <>
-          <h2>The games you play:</h2>
+          <h2 className="Picker__headline">
+            The games you play
+            { picks.length !== maxPicks ? ` (${picks.length}/${maxPicks})` : ` (${maxPicks})`}:
+          </h2>
           <ul className="Picker__picks">
-            { picks.reverse().map((game) => (
+            { picksList.map((game) => (
               <li key={game.slug}>
                 <PickItem game={game} onVeto={onVetoAction} />
               </li>
