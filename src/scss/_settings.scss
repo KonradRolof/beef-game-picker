@@ -3,39 +3,39 @@ $ci-darkest: #212121;
 
 // Material Oceanic
 $mat-background: #263238;
-$mat-foreground: #B0BEC5;
-$mat-text: #607D8B;
-$mat-selection-background: #546E7A;
-$mat-selection-foreground: #FFFFFF;
-$mat-buttons: #2E3C43;
-$mat-second-background: #32424A;
+$mat-foreground: #b0bec5;
+$mat-text: #607d8b;
+$mat-selection-background: #546e7a;
+$mat-selection-foreground: #ffffff;
+$mat-buttons: #2e3c43;
+$mat-second-background: #32424a;
 $mat-disabled: #415967;
-$mat-contrast: #1E272C;
+$mat-contrast: #1e272c;
 $mat-active: #314549;
-$mat-border: #2A373E;
-$mat-highlight: #425B67;
-$mat-tree: #546E7A70;
-$mat-notifications: #1E272C;
+$mat-border: #2a373e;
+$mat-highlight: #425b67;
+$mat-tree: #546e7a70;
+$mat-notifications: #1e272c;
 $mat-accent-color: #009688;
-$mat-excluded-files-color: #2E3C43;
+$mat-excluded-files-color: #2e3c43;
 
 // Material Lighter
-$mat-light-background: #FAFAFA;
-$mat-light-foreground: #546E7A;
-$mat-light-text: #94A7B0;
-$mat-light-selection-background: #80CBC440;
+$mat-light-background: #fafafa;
+$mat-light-foreground: #546e7a;
+$mat-light-text: #94a7b0;
+$mat-light-selection-background: #80cbc440;
 $mat-light-selection-foreground: #546e7a;
-$mat-light-buttons: #F3F4F5;
-$mat-light-second-background: #FFFFFF;
-$mat-light-disabled: #D2D4D5;
-$mat-light-contrast: #EEEEEE;
-$mat-light-active: #E7E7E8;
+$mat-light-buttons: #f3f4f5;
+$mat-light-second-background: #ffffff;
+$mat-light-disabled: #d2d4d5;
+$mat-light-contrast: #eeeeee;
+$mat-light-active: #e7e7e8;
 $mat-light-border: #d3e1e8;
-$mat-light-highlight: #E7E7E8;
-$mat-light-tree: #80CBC440;
+$mat-light-highlight: #e7e7e8;
+$mat-light-tree: #80cbc440;
 $mat-light-notifications: #eae8e8;
-$mat-light-accent-color: #00BCD4;
-$mat-light-excluded-files-color: #CCD7DA50;
+$mat-light-accent-color: #00bcd4;
+$mat-light-excluded-files-color: #ccd7da50;
 
 $mat-light-green-color: #c3e88d;
 $mat-light-yellow-color: #ffcb6b;
@@ -61,7 +61,7 @@ $brands: (
   nintendo: $brand-nintendo,
   steam: $brand-steam,
   epic: $brand-epic,
-  pc-gamepass: $brand-xbox
+  pc-gamepass: $brand-xbox,
 );
 
 $white: #fff;
@@ -73,15 +73,15 @@ $elements-font-sizes: (
   h1: (
     xs: 20,
     sm: 35,
-    md: 70
+    md: 70,
   ),
   h2: (
     xs: 18,
     sm: 24,
-    md: 28
+    md: 28,
   ),
   p: (
     xs: 18,
-    md: 20
-  )
-)
+    md: 20,
+  ),
+);

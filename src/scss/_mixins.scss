@@ -19,7 +19,7 @@ $breakpoint-map: (
   md: 768,
   lg: 1024,
   xl: 1200,
-  xxl: 1600
+  xxl: 1600,
 ) !default;
 
 @mixin koro-breakpoint($query) {
@@ -27,7 +27,7 @@ $breakpoint-map: (
   $stop: xl;
   $direction: min;
 
-  @if "list" == type-of($query) {
+  @if 'list' == type-of($query) {
     @if 2 == length($query) {
       $breakpoint: nth($query, 1);
       $direction: nth($query, 2);
@@ -38,26 +38,37 @@ $breakpoint-map: (
     }
   }
 
-  @if "number" == type-of($direction) {
+  @if 'number' == type-of($direction) {
     $stop: nth($query, 2);
     $direction: between;
   }
 
   @if map-has-key($breakpoint-map, $breakpoint) {
     @if between == $direction {
-      $max-width: map-get-next($breakpoint-map, $stop, $fallback: 10000px) - .1;
+      $max-width: map-get-next($breakpoint-map, $stop, $fallback: 10000px) -
+        0.1;
 
       @media only screen and (min-width: #{koro-rem-calc(map-get($breakpoint-map, $breakpoint))}) and (max-width: #{koro-rem-calc($max-width)}) {
         @content;
       }
     } @else if only == $direction {
-      $max-width: map-get-next($breakpoint-map, $breakpoint, $fallback: 10000px) - .1;
+      $max-width: map-get-next(
+          $breakpoint-map,
+          $breakpoint,
+          $fallback: 10000px
+        ) -
+        0.1;
 
       @media only screen and (min-width: #{koro-rem-calc(map-get($breakpoint-map, $breakpoint))}) and (max-width: #{koro-rem-calc($max-width)}) {
         @content;
       }
     } @else if max == $direction {
-      $max-width: map-get-next($breakpoint-map, $breakpoint, $fallback: 10000px) - .1;
+      $max-width: map-get-next(
+          $breakpoint-map,
+          $breakpoint,
+          $fallback: 10000px
+        ) -
+        0.1;
 
       @media only screen and (max-width: #{koro-rem-calc($max-width)}) {
         @content;
@@ -68,7 +79,7 @@ $breakpoint-map: (
       }
     }
   } @else {
-    @if "number" == type-of($stop) {
+    @if 'number' == type-of($stop) {
       @media only screen and (min-width: #{koro-rem-calc($breakpoint)}) and (max-width: #{koro-rem-calc($stop)}) {
         @content;
       }
@@ -95,7 +106,7 @@ $breakpoint-map: (
 // }
 
 @mixin ratio($x, $y) {
-  $padding: unquote(($y / $x) * 100 + "%");
+  $padding: unquote(($y / $x) * 100 + '%');
   padding-top: $padding;
   width: 100%;
 }
@@ -126,7 +137,7 @@ $breakpoint-map: (
   @each $item in $map {
     $breakpoint-name: nth($item, 1);
 
-    @if "xs" == $breakpoint-name or "small" == $breakpoint-name {
+    @if 'xs' == $breakpoint-name or 'small' == $breakpoint-name {
       #{$prop}: #{nth($item, 2)};
     } @else {
       @include koro-breakpoint($breakpoint-name) {
@@ -145,7 +156,7 @@ $breakpoint-map: (
     $query: nth($bp, 1);
     $fz: nth($bp, 2);
 
-    @if "xs" == $query or "small" == $query {
+    @if 'xs' == $query or 'small' == $query {
       @include koro-set-fz-prop($fz);
     } @else {
       @include koro-breakpoint($query) {
@@ -213,10 +224,8 @@ $breakpoint-map: (
   background-color: $bgc;
   border: 1px solid $bdc;
   border-radius: $ci-border-radius;
-  box-shadow: 0 1px 2px rgba($black, 0.15),
-    0 2px 3px rgba($black, 0.15),
-    0 3px 5px rgba($black, 0.15),
-    0 5px 8px rgba($black, 0.15);
+  box-shadow: 0 1px 2px rgba($black, 0.15), 0 2px 3px rgba($black, 0.15),
+    0 3px 5px rgba($black, 0.15), 0 5px 8px rgba($black, 0.15);
   color: $color;
   cursor: pointer;
   display: inline-block;
@@ -225,9 +234,7 @@ $breakpoint-map: (
   line-height: 1.1;
   padding: 0.8em 1.2em;
   text-transform: uppercase;
-  transition: background-color 0.2s,
-    border-color 0.2s,
-    box-shadow 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
 
   @include koro-breakpoint(sm) {
     font-size: #{koro-rem-calc(18)};
@@ -237,11 +244,8 @@ $breakpoint-map: (
   &:active {
     background-color: lighten($bgc, 5%);
     border-color: lighten/$bdc, 5%;
-    box-shadow: 0 1px 2px rgba($black, 0.15),
-    0 2px 3px rgba($black, 0.15),
-    0 3px 5px rgba($black, 0.15),
-    0 5px 8px rgba($black, 0.15),
-    0 8px 13px rgba($black, 0.15),
-    0 13px 21px rgba($black, 0.15);
+    box-shadow: 0 1px 2px rgba($black, 0.15), 0 2px 3px rgba($black, 0.15),
+      0 3px 5px rgba($black, 0.15), 0 5px 8px rgba($black, 0.15),
+      0 8px 13px rgba($black, 0.15), 0 13px 21px rgba($black, 0.15);
   }
 }

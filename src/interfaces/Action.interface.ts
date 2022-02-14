@@ -1,4 +1,4 @@
 export default interface ActionInterface {
-  type: string
-  payload: any
-}; // eslint-disable-line
+  type: string;
+  payload: any;
+} // eslint-disable-line

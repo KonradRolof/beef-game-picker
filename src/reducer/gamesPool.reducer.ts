@@ -8,10 +8,13 @@ export const ACTIONS = {
   DISABLE_ALL: 'disable-all',
 };
 
-export default function gamePoolReducer(state: Game[], action: ActionInterface): Game[] {
+export default function gamePoolReducer(
+  state: Game[],
+  action: ActionInterface,
+): Game[] {
   let newState: Game[];
 
-  switch(action.type) {
+  switch (action.type) {
     case ACTIONS.SET:
       return sortGames(action.payload as Game[]);
 
@@ -19,11 +22,11 @@ export default function gamePoolReducer(state: Game[], action: ActionInterface):
       const { game } = action.payload;
       const item = state.find((item) => item.slug === game.slug);
       if (!item) return state;
-      const gameItem = {...item};
+      const gameItem = { ...item };
       gameItem.isActive = !game.isActive;
       newState = state.filter((item) => item.slug !== game.slug);
       return sortGames([...newState, gameItem]);
-  
+
     case ACTIONS.DISABLE_ALL:
       newState = state.map((game) => {
         game.isActive = false;

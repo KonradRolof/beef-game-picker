@@ -21,14 +21,10 @@
   background-color: $mat-background;
   border: 1px solid $mat-highlight;
   border-radius: $ci-border-radius;
-  box-shadow: 0 1px 2px rgba($black, 0.15),
-    0 2px 3px rgba($black, 0.15),
-    0 3px 5px rgba($black, 0.15),
-    0 5px 8px rgba($black, 0.15),
-    0 8px 13px rgba($black, 0.15),
-    0 13px 21px rgba($black, 0.15),
-    0 21px 34px rgba($black, 0.15),
-    0 34px 55px rgba($black, 0.15);
+  box-shadow: 0 1px 2px rgba($black, 0.15), 0 2px 3px rgba($black, 0.15),
+    0 3px 5px rgba($black, 0.15), 0 5px 8px rgba($black, 0.15),
+    0 8px 13px rgba($black, 0.15), 0 13px 21px rgba($black, 0.15),
+    0 21px 34px rgba($black, 0.15), 0 34px 55px rgba($black, 0.15);
   display: flex;
   justify-content: center;
   margin-top: 15vh;

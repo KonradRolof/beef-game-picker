@@ -14,7 +14,7 @@ function App() {
 
   const handleGameClick = (game: Game) => {
     dispatch({
-      type:ACTIONS.FILTER,
+      type: ACTIONS.FILTER,
       payload: { game },
     } as ActionInterface);
   };
@@ -26,21 +26,26 @@ function App() {
     } as ActionInterface);
   };
 
-  useEffect(() => dispatch({
-    type: ACTIONS.SET,
-    payload: games,
-  } as ActionInterface), [games]);
+  useEffect(
+    () =>
+      dispatch({
+        type: ACTIONS.SET,
+        payload: games,
+      } as ActionInterface),
+    [games],
+  );
 
   return (
     <div className="BeefGamePicker">
       <div className="BeefGamePicker__container">
         <header className="BeefGamePicker__header">
-          <h1>Royal Beef
+          <h1>
+            Royal Beef
             <span>Pick your Games</span>
           </h1>
         </header>
         <div>
-          { 0 === gamesPool.length ? (
+          {0 === gamesPool.length ? (
             <p>Loading ...</p>
           ) : (
             <>
@@ -49,33 +54,33 @@ function App() {
                 <header className="games-pool__header">
                   <button
                     className="btn"
-                    onClick={() => setShowPool((state) => !state)}
-                  >
-                    { showPool ? 'Hide games pool' : 'Show games pool' }
+                    onClick={() => setShowPool((state) => !state)}>
+                    {showPool ? 'Hide games pool' : 'Show games pool'}
                   </button>
                 </header>
-                { showPool && (
+                {showPool && (
                   <>
                     <div className="games-pool__control">
                       <button
                         className="btn"
-                        onClick={() => handleUnselectAll()}
-                      >Unselect all games</button>
+                        onClick={() => handleUnselectAll()}>
+                        Unselect all games
+                      </button>
                     </div>
                     <div className="games-pool__body">
                       <ul>
-                        { gamesPool.map((game) => (
-                          <li key={ game.slug }>
+                        {gamesPool.map((game) => (
+                          <li key={game.slug}>
                             <PoolItem
-                              game={ game }
+                              game={game}
                               onChange={(game: Game) => handleGameClick(game)}
                             />
                           </li>
-                        )) }
+                        ))}
                       </ul>
                     </div>
                   </>
-                ) }
+                )}
               </section>
             </>
           )}

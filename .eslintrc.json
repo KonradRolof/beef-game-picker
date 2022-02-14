@@ -1,19 +1,15 @@
 {
-  "extends": [
-    "react-app",
-    "react-app/jest"
-  ],
+  "extends": ["react-app", "react-app/jest", "prettier"],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": ["error", "always"],
-    "semi": ["error", "always",  { "omitLastInOneLineBlock": true }],
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
     "semi-style": ["error", "last"]
   },
   "overrides": [
     {
       "files": ["**/*.ts?(x)"],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }

@@ -1,4 +1,4 @@
-import Platform from "./Platform.interface";
+import Platform from './Platform.interface';
 
 export default interface Game {
   id: number;

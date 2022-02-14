@@ -9,7 +9,7 @@
 // @return {Number} - unitless number
 
 @function strip-unit($number) {
-  @if type-of($number) == "number" and not unitless($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
     @return math.div($number, $number * 0 + 1);
   }
 
@@ -29,11 +29,11 @@
 @function koro-normalize-font-base($fb) {
   @if unitless($fb) {
     @return $fb;
-  } @else if unit($fb) == "px" {
+  } @else if unit($fb) == 'px' {
     @return strip-unit($fb);
-  } @else if unit($fb) == "rem" {
+  } @else if unit($fb) == 'rem' {
     @return strip-unit($fb) * 16;
-  } @else if unit($fb) == "%" {
+  } @else if unit($fb) == '%' {
     @return math.div(strip-unit($fb) * 16, 100);
   }
 }
@@ -52,8 +52,12 @@
   $value-list: null;
 
   @each $val in $values {
-    @if type-of($val) == "number" {
-      $value-list: append($value-list, math.div(strip-unit($val), koro-normalize-font-base($font-size-base)) + "rem");
+    @if type-of($val) == 'number' {
+      $value-list: append(
+        $value-list,
+        math.div(strip-unit($val), koro-normalize-font-base($font-size-base)) +
+          'rem'
+      );
     } @else {
       $value-list: append($value-list, $val);
     }
@@ -83,13 +87,10 @@
 // .bar { width: map-get-next($map, b, auto); } => .bar { width: auto; }
 
 @function map-get-next($map, $key, $fallback: false, $return: value) {
-
   // Check if map is valid
   @if type-of($map) == map {
-
     // Check if key exists in map
     @if map-has-key($map, $key) {
-
       // Init index counter variable
       $i: 0;
 
@@ -141,7 +142,7 @@
 // @param {number} $font-size
 
 @mixin koro-set-fz-prop($font-size) {
-  @if unit($font-size) == "px" or unitless($font-size) {
+  @if unit($font-size) == 'px' or unitless($font-size) {
     font-size: #{koro-rem-calc($font-size)};
   } @else {
     font-size: #{$font-size};

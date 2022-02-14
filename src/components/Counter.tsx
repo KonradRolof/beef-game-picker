@@ -7,10 +7,10 @@ const DELAY_SECOND = 1000;
 const CLOSE_DELAY = 2000;
 
 type CounterProps = {
-  game: Game|null;
+  game: Game | null;
   delayTime: number;
   onCountdownEnd: Function;
-}
+};
 
 function Counter(props: CounterProps) {
   const { game, delayTime, onCountdownEnd } = props;
@@ -29,29 +29,29 @@ function Counter(props: CounterProps) {
         onCountdownEnd(game);
         setStepLeft(delayTime);
       }, CLOSE_DELAY);
-    };
+    }
   }, [game, delayTime, stepLeft, onCountdownEnd]);
 
   useEffect(() => {
     isMounted.current = 1;
     counterAction();
-    return () => { isMounted.current = 0 };
+    return () => {
+      isMounted.current = 0;
+    };
   }, [counterAction]);
 
   return (
     <section className="Counter">
       <div className="Counter__layer">
-        { 0 < stepLeft ? (
+        {0 < stepLeft ? (
           <div className="Counter__counter">
             <div className="Counter__step" ref={stepElm}>
-              { stepLeft }
+              {stepLeft}
             </div>
           </div>
         ) : (
-          <div className="Counter__pick">
-            { null !== game && game.title }
-          </div>
-        ) }
+          <div className="Counter__pick">{null !== game && game.title}</div>
+        )}
       </div>
     </section>
   );
