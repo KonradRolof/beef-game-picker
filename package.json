@@ -58,6 +58,7 @@
     "stylelint-config-standard-scss": "^3.0.0"
   },
   "lint-staged": {
-    "*.{js,css,scss,ts,tsx,json}": "prettier --write"
+    "*.{js,css,scss,ts,tsx,json}": "prettier --write",
+    "*.scss": "stylelint:fix"
   }
 }
