@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 @import './settings';
 @import './functions';
 @import './mixins';
@@ -106,8 +108,8 @@
 }
 
 @each $brand in $brands {
-  $name: nth($brand, 1);
-  $value: nth($brand, 2);
+  $name: list.nth($brand, 1);
+  $value: list.nth($brand, 2);
 
   .PickItem__label--#{$name} {
     background-color: $value;

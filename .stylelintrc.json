@@ -1,0 +1,26 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "rules": {
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "color-hex-case": "lower",
+    "font-family-name-quotes": "always-unless-keyword",
+    "max-nesting-depth": [
+      3,
+      {
+        "ignore": ["pseudo-classes", "blockless-at-rules"],
+        "ignoreAtRules": ["if", "include", "media", "supports", "for", "each"]
+      }
+    ],
+    "selector-attribute-quotes": "always",
+    "selector-class-pattern": [
+      "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
+      {
+        "message": "Expected hyphenated BEM class name format"
+      }
+    ],
+    "scss/comment-no-empty": null,
+    "scss/operator-no-newline-after": null,
+    "scss/operator-no-newline-before": null
+  }
+}

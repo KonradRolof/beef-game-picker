@@ -1,3 +1,6 @@
+@use 'sass:list';
+@use 'sass:color';
+
 @import './functions';
 
 // return @media breakpoint with min- or max-width
@@ -29,17 +32,17 @@ $breakpoint-map: (
 
   @if 'list' == type-of($query) {
     @if 2 == length($query) {
-      $breakpoint: nth($query, 1);
-      $direction: nth($query, 2);
+      $breakpoint: list.nth($query, 1);
+      $direction: list.nth($query, 2);
     } @else {
-      $breakpoint: nth($query, 1);
-      $stop: nth($query, 2);
-      $direction: nth($query, 3);
+      $breakpoint: list.nth($query, 1);
+      $stop: list.nth($query, 2);
+      $direction: list.nth($query, 3);
     }
   }
 
   @if 'number' == type-of($direction) {
-    $stop: nth($query, 2);
+    $stop: list.nth($query, 2);
     $direction: between;
   }
 
@@ -106,7 +109,8 @@ $breakpoint-map: (
 // }
 
 @mixin ratio($x, $y) {
-  $padding: unquote(($y / $x) * 100 + '%');
+  $padding: ($y / $x) * 100 + '%';
+
   padding-top: $padding;
   width: 100%;
 }
@@ -135,13 +139,13 @@ $breakpoint-map: (
 
 @mixin koro-apply-values-from-map($prop, $map) {
   @each $item in $map {
-    $breakpoint-name: nth($item, 1);
+    $breakpoint-name: list.nth($item, 1);
 
     @if 'xs' == $breakpoint-name or 'small' == $breakpoint-name {
-      #{$prop}: #{nth($item, 2)};
+      #{$prop}: #{list.nth($item, 2)};
     } @else {
       @include koro-breakpoint($breakpoint-name) {
-        #{$prop}: #{nth($item, 2)};
+        #{$prop}: #{list.nth($item, 2)};
       }
     }
   }
@@ -153,8 +157,8 @@ $breakpoint-map: (
 
 @mixin koro-responsive-font-size($sizes) {
   @each $bp in $sizes {
-    $query: nth($bp, 1);
-    $fz: nth($bp, 2);
+    $query: list.nth($bp, 1);
+    $fz: list.nth($bp, 2);
 
     @if 'xs' == $query or 'small' == $query {
       @include koro-set-fz-prop($fz);
@@ -204,8 +208,8 @@ $breakpoint-map: (
 
 @mixin apply-font-sizes($sizes-map) {
   @each $element in $sizes-map {
-    $tag-name: nth($element, 1);
-    $elm-bps: nth($element, 2);
+    $tag-name: list.nth($element, 1);
+    $elm-bps: list.nth($element, 2);
 
     #{$tag-name},
     .#{$tag-name} {
@@ -217,8 +221,8 @@ $breakpoint-map: (
 // ------------------------------------------------ //
 
 @mixin button($color, $bgc, $bdc: null) {
-  @if ($bdc == null) {
-    $bdc: lighten($bgc, 5%);
+  @if not $bdc {
+    $bdc: color.adjust($bgc, $lightness: 5%);
   }
 
   background-color: $bgc;
@@ -242,7 +246,7 @@ $breakpoint-map: (
 
   &:hover,
   &:active {
-    background-color: lighten($bgc, 5%);
+    background-color: color.adjust($bgc, $lightness: 5%);
     border-color: lighten/$bdc, 5%;
     box-shadow: 0 1px 2px rgba($black, 0.15), 0 2px 3px rgba($black, 0.15),
       0 3px 5px rgba($black, 0.15), 0 5px 8px rgba($black, 0.15),

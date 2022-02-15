@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:list';
+
 @import './settings';
 @import './functions';
 @import './mixins';
@@ -66,7 +69,7 @@
   transform: translate(0, -2px);
 
   .PoolItem--disabled & {
-    background-color: desaturate($mat-light-red-color, 100%);
+    background-color: color.adjust($mat-light-red-color, $saturation: -100%);
     color: $mat-light-contrast;
   }
 }
@@ -98,8 +101,8 @@
 }
 
 @each $brand in $brands {
-  $name: nth($brand, 1);
-  $value: nth($brand, 2);
+  $name: list.nth($brand, 1);
+  $value: list.nth($brand, 2);
 
   .PoolItem__platform-label--#{$name} {
     background-color: $value;

@@ -42,6 +42,7 @@
 
   .btn--pick {
     @include button($white, $mat-accent-color);
+
     font-size: #{koro-rem-calc(22)};
     margin: 0 1rem 0 0;
 

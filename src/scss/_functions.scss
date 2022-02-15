@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:list';
 
 // Remove the unit of a length
 //
@@ -53,13 +54,13 @@
 
   @each $val in $values {
     @if type-of($val) == 'number' {
-      $value-list: append(
+      $value-list: list.append(
         $value-list,
         math.div(strip-unit($val), koro-normalize-font-base($font-size-base)) +
           'rem'
       );
     } @else {
-      $value-list: append($value-list, $val);
+      $value-list: list.append($value-list, $val);
     }
   }
 
