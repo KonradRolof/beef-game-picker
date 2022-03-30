@@ -4,489 +4,560 @@
     "platform": "Xbox, Play Station 4",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Worms",
     "platform": "Xbox",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Paul"
   },
   {
     "title": "Halo",
     "platform": "Xbox",
     "genre": "Shooter",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Jens"
   },
   {
     "title": "Forza Mortorsport 7",
     "platform": "Xbox",
     "genre": "Sim Racing",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Mortal Kombat",
     "platform": "Xbox",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Stefan"
   },
   {
     "title": "Brawlhalla",
     "platform": "Xbox",
     "genre": "Brawler",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Free2Play"
   },
   {
     "title": "Mario Kart",
     "platform": "Switch",
     "genre": "Arcade Racing",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Mario Golf Rush",
     "platform": "Switch",
     "genre": "Arcade Sport",
     "players": 4,
-    "multiDeviceNeeded": "TRUE"
+    "multideviceneeded": true,
+    "owners": "Stefan"
   },
   {
     "title": "FIFA",
     "platform": "Xbox",
     "genre": "Sport Sim",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "GT Sport",
     "platform": "Play Station 4",
     "genre": "Sim Racing",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Nidhogg",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Tekken 7",
     "platform": "Xbox",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Stefan"
   },
   {
     "title": "Dragon Ball Fighter Z",
     "platform": "Xbox, Switch",
     "genre": "Beat 'em up 2D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Paul, Konrad"
   },
   {
     "title": "Wipeout",
     "platform": "Play Station 4",
     "genre": "Arcade Racing",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Bomberman",
     "platform": "Switch",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Super Street Fighter",
     "platform": "SNES, Xbox, Steam",
     "genre": "Beat 'em up 2D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "NBA 2k Playgrounds",
     "platform": "Xbox",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Lance A Lot",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Gamepass"
   },
   {
     "title": "Dirt 5",
     "platform": "Xbox",
     "genre": "Sim Racing",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Dodgeball Academia",
     "platform": "Xbox, Switch, Play Station 4",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Gamepass"
   },
   {
     "title": "Dunk Lords",
     "platform": "Xbox",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "PGA Tour",
-    "platform": "Xbox",
+    "platform": "Xbox, Steam",
     "genre": "Sport Sim",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Stefan, Konrad"
   },
   {
     "title": "Gang Beasts",
     "platform": "Xbox, Steam",
     "genre": "Brawler",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Tetris Effects Connected",
     "platform": "Xbox, Switch",
     "genre": "Puzzle",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Overcooked! 2",
     "platform": "Switch",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Soul Calibour",
-    "platform": "Xbox, Play Station 4",
+    "platform": "Play Station 4, Xbox",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Tony Hawks Pro Skater",
     "platform": "Xbox",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Jens"
   },
   {
     "title": "Trials",
     "platform": "Xbox",
     "genre": "Arcade Racing",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Paul"
   },
   {
     "title": "WWE 2K",
     "platform": "Xbox",
     "genre": "Beat 'em up 3D",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Stefan"
   },
   {
     "title": "Super Smash Bros",
     "platform": "Switch",
     "genre": "Brawler",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Paul, Jens, Konrad"
   },
   {
     "title": "Rayman Legends Kung Foot",
     "platform": "Xbox, Play Station 4",
     "genre": "Indi Action",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad, Stefan"
   },
   {
     "title": "Injustice 2",
     "platform": "Xbox",
     "genre": "Beat 'em up 2D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Super Mario Maker 2",
     "platform": "Switch",
     "genre": "Jump 'n' Run",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Castle Crashers",
     "platform": "Play Station 4, Xbox, Switch, Steam",
     "genre": "Brawler",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "Mario Tennis Aces",
     "platform": "Switch",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Puyo Puyo Tetris",
     "platform": "Switch",
     "genre": "Puzzle",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Pokkén Tournament DX",
     "platform": "Switch",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Mario & Sonic bei den Olympischen Spielen",
     "platform": "Switch",
     "genre": "Arcade Sport",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Plants vs. Zombies: Garden Warefare 2",
     "platform": "Xbox",
     "genre": "Shooter",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Gamepass"
   },
   {
     "title": "Disc Jam",
     "platform": "Play Station 4",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Paul"
   },
   {
     "title": "Hellish Quart",
     "platform": "Steam",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Laser League",
     "platform": "Xbox",
     "genre": "Arcade Sport",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "Arms",
     "platform": "Switch",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Starwhal",
     "platform": "Xbox",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Tekken 3 Volleyball",
     "platform": "Play Station 1",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "Blobby Volley",
     "platform": "http://blobbyvolley.de/data/bv2browser/",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Free2Play"
   },
   {
     "title": "Red Faction",
     "platform": "Play Station 3",
     "genre": "Indi Action",
     "players": 1,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens?"
   },
   {
     "title": "Speedrunners",
     "platform": "Steam",
     "genre": "Jump 'n' Run",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Rocket League",
     "platform": "Xbox, Play Station 4",
     "genre": "Arcade Sport",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Free2Play"
   },
   {
     "title": "Towerfall",
     "platform": "Play Station 4, Xbox",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Geometry Wars 3 Dimensions Envolved",
     "platform": "Xbox",
     "genre": "Shooter",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Crash Team Racing Nitro-Fueled",
     "platform": "Xbox",
     "genre": "Arcade Racing",
     "players": 4,
-    "multiDeviceNeeded": "TRUE"
+    "multideviceneeded": true,
+    "owners": "Konrad"
   },
   {
     "title": "Starcraft 2",
     "platform": "Battlenet",
     "genre": "Strategy",
     "players": 4,
-    "multiDeviceNeeded": "TRUE"
+    "multideviceneeded": true,
+    "owners": "Free2Play"
   },
   {
     "title": "Gears of War Ultimate",
     "platform": "Xbox",
     "genre": "Shooter",
     "players": 4,
-    "multiDeviceNeeded": "TRUE"
+    "multideviceneeded": true,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Doom",
     "platform": "Xbox",
     "genre": "Shooter",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Marvel vs. Capcom",
     "platform": "Xbox",
     "genre": "Beat 'em up 2D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens, Konrad"
   },
   {
     "title": "Clumsy Rush",
     "platform": "Xbox",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Hot Wheels Unleashed",
     "platform": "Xbox",
     "genre": "Arcade Racing",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Age of Empires IV",
     "platform": "PC Gamepass, Steam",
     "genre": "Strategy",
     "players": 4,
-    "multiDeviceNeeded": "TRUE"
+    "multideviceneeded": true,
+    "owners": "Gamepass"
   },
   {
     "title": "Demon Slayer: Kimetsu no Yaiba",
     "platform": "Xbox",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "UFC",
     "platform": "Xbox",
     "genre": "Sport Sim",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Stick Fight: The Game",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "Naruto Shippuden: Ultimate Ninja Storm 4",
     "platform": "Xbox",
     "genre": "Beat 'em up 3D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Paul, Konrad"
   },
   {
-    "title": "Tricky Towers",
+    "title": "Tricky Towers\r",
     "platform": "Steam, Switch",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "Move or Die",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Lethal League",
     "platform": "Steam, Xbox",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Jens"
   },
   {
     "title": "BlazBlue",
     "platform": "Play Station 4",
     "genre": "Beat 'em up 2D",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "What the Golf",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 2,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
   },
   {
     "title": "Genital Jousting",
     "platform": "Steam",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false,
+    "owners": "Konrad"
   },
   {
     "title": "Party Panic",
     "platform": "Steam, Xbox, Play Station 4",
     "genre": "Indi Action",
     "players": 4,
-    "multiDeviceNeeded": "FALSE"
+    "multideviceneeded": false
+  },
+  {
+    "title": "Skullgirls 2nd Encore",
+    "platform": "Steam",
+    "genre": "Beat 'em up 2D",
+    "players": 2,
+    "multideviceneeded": false,
+    "owners": "Konrad"
   }
 ]

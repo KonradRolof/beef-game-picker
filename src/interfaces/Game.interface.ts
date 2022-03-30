@@ -9,4 +9,5 @@ export default interface Game {
   platforms: Platform[];
   players: number;
   slug: string;
+  owners?: string[];
 } // eslint-disable-line

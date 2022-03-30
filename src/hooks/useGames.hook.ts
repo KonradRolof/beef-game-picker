@@ -9,8 +9,14 @@ type CsvData = {
   genre: string;
   platform: string;
   players: number;
-  multiDeviceNeeded: string;
+  multiDeviceNeeded: boolean;
+  owners?: string;
 };
+
+function getOwners(data: CsvData) {
+  if (!data.owners) return null;
+  return data.owners.split(',').map((item) => item.trim());
+}
 
 export default function useGames(url: string): Game[] {
   const [games, setGames] = useState<Game[]>([]);
@@ -37,13 +43,14 @@ export default function useGames(url: string): Game[] {
               } as Platform;
             }),
             players: item.players,
-            multiDeviceNeeded: item.multiDeviceNeeded === 'TRUE',
+            multiDeviceNeeded: item.multiDeviceNeeded,
             isActive: true,
             id: index,
             slug: slugify(item.title, {
               lower: true,
               strict: true,
             }),
+            owners: getOwners(item),
           } as Game;
         });
         setGames(gameData);

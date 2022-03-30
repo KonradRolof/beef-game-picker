@@ -127,6 +127,7 @@
   background-color: $brand-nintendo;
 }
 
-.PickItem__label--multi {
+.PickItem__label--multi,
+.PickItem__label--no-owner {
   background-color: $mat-light-red-color;
 }

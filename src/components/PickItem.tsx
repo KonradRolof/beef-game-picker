@@ -19,6 +19,14 @@ function PickItem(props: PickItemProps) {
         <span>
           {game.players} {1 < game.players ? 'Players' : 'Player'}
         </span>
+        {game.owners && (
+          <>
+            <span className="PickItem__divider">|</span>
+            {game.owners.map(
+              (owner, index) => `${index > 0 ? ', ' : ''}${owner}`,
+            )}
+          </>
+        )}
       </div>
       <div className="PickItem__labels">
         {game.platforms.map((platform) => (
@@ -34,6 +42,11 @@ function PickItem(props: PickItemProps) {
         {game.multiDeviceNeeded && (
           <span className="PickItem__label PickItem__label--multi">
             Needs multiple devices
+          </span>
+        )}
+        {!game.owners && (
+          <span className="PickItem__label PickItem__label--no-owner">
+            No owner
           </span>
         )}
       </div>
