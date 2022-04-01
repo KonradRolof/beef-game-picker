@@ -5,11 +5,12 @@ import '../scss/PoolItem.scss';
 
 type PoolItemProps = {
   game: Game;
+  showOwnerFlag: boolean;
   onChange: Function;
 };
 
 function PoolItem(props: PoolItemProps) {
-  const { game, onChange } = props;
+  const { game, showOwnerFlag, onChange } = props;
   const { title, genre, platforms, multiDeviceNeeded, isActive } = game;
 
   const handleChange = () => onChange(game);
@@ -25,7 +26,7 @@ function PoolItem(props: PoolItemProps) {
               Needs multiple devices
             </span>
           )}
-          {!game.owners && (
+          {!game.owners && showOwnerFlag && (
             <span className="PoolItem__owner-flag">No owners</span>
           )}
         </header>

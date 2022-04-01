@@ -11,6 +11,7 @@ function App() {
   const games = useGames('./data/games.json');
   const [gamesPool, dispatch] = useReducer(gamePoolReducer, []);
   const [showPool, setShowPool] = useState<boolean>(false);
+  const [showOwnerFlag, setShowOwnerFlag] = useState<boolean>(false);
 
   const handleGameClick = (game: Game) => {
     dispatch({
@@ -63,6 +64,11 @@ function App() {
                     <div className="games-pool__control">
                       <button
                         className="btn"
+                        onClick={() => setShowOwnerFlag((state) => !state)}>
+                        {showOwnerFlag ? 'hide' : 'show'} owner flag
+                      </button>
+                      <button
+                        className="btn"
                         onClick={() => handleUnselectAll()}>
                         Unselect all games
                       </button>
@@ -73,6 +79,7 @@ function App() {
                           <li key={game.slug}>
                             <PoolItem
                               game={game}
+                              showOwnerFlag={showOwnerFlag}
                               onChange={(game: Game) => handleGameClick(game)}
                             />
                           </li>

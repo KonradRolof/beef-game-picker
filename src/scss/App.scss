@@ -68,11 +68,14 @@
 }
 
 .games-pool__control {
+  margin-left: -5px;
+  margin-right: -5px;
   padding: 15px 0;
   text-align: right;
 
   .btn {
     font-size: #{koro-rem-calc(12)};
+    margin: 0 5px 2px;
   }
 }
 
