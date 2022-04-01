@@ -25,6 +25,9 @@ function PoolItem(props: PoolItemProps) {
               Needs multiple devices
             </span>
           )}
+          {!game.owners && (
+            <span className="PoolItem__owner-flag">No owners</span>
+          )}
         </header>
         <div className="PoolItem__body">
           {platforms.map((platform) => (

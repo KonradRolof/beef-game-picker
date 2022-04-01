@@ -52,6 +52,19 @@
   }
 }
 
+.PoolItem__owner-flag {
+  background-color: $mat-light-error-color;
+  border-radius: 50%;
+  display: block;
+  font-size: 0;
+  height: 5px;
+  right: 7px;
+  line-height: 0;
+  position: absolute;
+  top: 7px;
+  width: 5px;
+}
+
 .PoolItem__genre {
   color: $mat-light-text;
   font-size: #{koro-rem-calc(11)};
